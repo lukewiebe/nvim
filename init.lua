@@ -34,9 +34,8 @@ if vim.g.neovide then
 end
 
 -- [[ PLUGINS ]]
--- using packer.nvim
 
-return require('packer').startup(function(use)
+require('packer').startup(function(use)
   -- let packer manage itself
   use 'wbthomason/packer.nvim'
 
@@ -46,7 +45,7 @@ return require('packer').startup(function(use)
   use 'https://tpope.io/vim/sleuth.git'
   use 'https://tpope.io/vim/surround.git'
   use 'https://tpope.io/vim/repeat.git'
-
+  use 'https://tpope.io/vim/commentary.git'
+  use 'https://tpope.io/vim/fugitive.git'
   use 'neovim/nvim-lspconfig'
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 end)
