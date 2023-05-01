@@ -50,4 +50,5 @@ require('packer').startup(function(use)
 
   -- IDE features
   use 'https://github.com/neovim/nvim-lspconfig'
+  use 'https://github.com/mfussenegger/nvim-jdtls'
 end)
