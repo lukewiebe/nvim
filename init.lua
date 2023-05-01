@@ -39,7 +39,7 @@ require('packer').startup(function(use)
   -- let packer manage itself
   use 'wbthomason/packer.nvim'
 
-  -- required for me to feel sane
+  -- editor modifications
   use 'cohama/lexima.vim'
   use 'https://tpope.io/vim/abolish.git'
   use 'https://tpope.io/vim/sleuth.git'
@@ -47,5 +47,7 @@ require('packer').startup(function(use)
   use 'https://tpope.io/vim/repeat.git'
   use 'https://tpope.io/vim/commentary.git'
   use 'https://tpope.io/vim/fugitive.git'
-  use 'neovim/nvim-lspconfig'
+
+  -- IDE features
+  use 'https://github.com/neovim/nvim-lspconfig'
 end)
