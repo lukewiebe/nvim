@@ -13,7 +13,7 @@ vim.o.scrolloff = 5 -- show context, matches defaults.vim
 vim.cmd([[tnoremap <Esc> <C-\><C-n>]]) -- let esc exit insert mode in terminal buffer
 vim.o.foldmethod = "syntax"
 vim.o.foldlevel = 99 -- don't fold by default
-vim.o.laststatus = 1 -- Remove the statusline, just show the command line
+vim.o.laststatus = 1 -- Remove the statusline if there's only one window
 
 -- Tabs
 -- overridden by vim-sleuth in some cases
@@ -21,10 +21,15 @@ vim.o.tabstop = 4
 vim.o.softtabstop = -1 -- when negative, value of tabstop is used
 vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
 
--- Fix default colours for comments
-vim.cmd([[highlight Comment ctermfg=darkgrey]])
+--  COLORS --
+vim.cmd.colorscheme("spaceduck")
+-- tweak some color choices
+-- nvim_set_hl() wipes out the color group, so I need to rebuild the parts I want to keep manually
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { ctermbg = "none", ctermfg = 237 })
+vim.api.nvim_set_hl(0, "LineNr", { ctermbg = "none", ctermfg = 237 })
 
--- [[ NEOVIDE ]]
+-- NEOVIDE --
 
 if vim.g.neovide then
   vim.o.guifont = "JetBrains Mono:h13"
@@ -33,7 +38,7 @@ if vim.g.neovide then
   vim.cmd.colorscheme('delek') -- light mode
 end
 
--- [[ PLUGINS ]]
+--  PLUGINS --
 
 require('packer').startup(function(use)
   -- let packer manage itself
@@ -48,17 +53,24 @@ require('packer').startup(function(use)
   use 'https://tpope.io/vim/commentary.git'
   use 'https://tpope.io/vim/fugitive.git'
 
+  -- colorschemes
+  use 'https://github.com/pineapplegiant/spaceduck'
+  use 'https://github.com/rakr/vim-one'
+  use 'https://github.com/sainnhe/edge'
+
   -- IDE features
   use 'https://github.com/neovim/nvim-lspconfig'
   use 'https://github.com/mfussenegger/nvim-jdtls'
+
 end)
 
--- Global LSP configuration
-vim.diagnostic.disable() -- turn off all diagnostics.
+-- Global LSP configuration --
+
+vim.diagnostic.disable() -- turn off all inline diagnostics.
 -- use vim.diagnostic.enable() to restart them.
 
 vim.api.nvim_create_autocmd('LspAttach', {
-  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+  group = vim.api.nvim_create_augroup('UserLspConfig', { clear = true }),
   callback = function(ev)
     -- Enable completion triggered by <c-x><c-o>
     vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
