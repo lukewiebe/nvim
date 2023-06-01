@@ -15,9 +15,12 @@ vim.o.foldmethod = "syntax"
 vim.o.foldlevel = 99 -- don't fold by default
 vim.o.laststatus = 1 -- Remove the statusline if there's only one window
 
+-- on trial
+vim.o.autochdir = 1
+
 -- Tabs
 -- overridden by vim-sleuth in some cases
-vim.o.tabstop = 4
+vim.o.tabstop = 2
 vim.o.softtabstop = -1 -- when negative, value of tabstop is used
 vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
 
@@ -42,7 +45,7 @@ end
 
 require('packer').startup(function(use)
   -- let packer manage itself
-  use 'wbthomason/packer.nvim'
+  use 'https://github.com/wbthomason/packer.nvim'
 
   -- editor modifications
   use 'cohama/lexima.vim'
@@ -52,6 +55,7 @@ require('packer').startup(function(use)
   use 'https://tpope.io/vim/repeat.git'
   use 'https://tpope.io/vim/commentary.git'
   use 'https://tpope.io/vim/fugitive.git'
+  use 'https://github.com/tpope/vim-vinegar.git' -- make netrw awesome
 
   -- colorschemes
   use 'https://github.com/pineapplegiant/spaceduck'
@@ -61,8 +65,34 @@ require('packer').startup(function(use)
   -- IDE features
   use 'https://github.com/neovim/nvim-lspconfig'
   use 'https://github.com/mfussenegger/nvim-jdtls'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+}
 
 end)
+
+-- Tree-Sitter --
+
+-- Borrowed formatting from https://github.com/nvim-treesitter/nvim-treesitter
+
+require('nvim-treesitter.configs').setup {
+  ensure_installed = {
+    -- Add new languages here
+    "java",
+    "python",
+    "javascript",
+    "css",
+    "html",
+    "lua",
+  },
+
+  highlight = {
+    enable = true,
+    -- optimizations can be applied here if needed
+  }
+
+}
 
 -- Global LSP configuration --
 
