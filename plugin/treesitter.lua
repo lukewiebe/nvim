@@ -6,13 +6,16 @@
 require('nvim-treesitter.configs').setup {
   ensure_installed = {
     -- Add new languages here
-    -- Source of language names: <needed>
+    -- Source of language names: https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
     "java",
     "python",
     "javascript",
     "css",
     "html",
     "lua",
+    "dockerfile",
+    "json",
+    "nix",
   },
 
   highlight = {
@@ -21,3 +24,7 @@ require('nvim-treesitter.configs').setup {
   }
 
 }
+
+-- Set those options
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
