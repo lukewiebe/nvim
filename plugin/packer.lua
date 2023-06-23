@@ -4,7 +4,7 @@ require('packer').startup(function(use)
   use 'https://github.com/wbthomason/packer.nvim'
 
   -- editor (sanity) modifications
-  use 'cohama/lexima.vim' -- sensible bracket autoclose behaviour
+  use 'https://github.com/cohama/lexima.vim' -- sensible bracket autoclose behaviour
   use 'https://tpope.io/vim/abolish.git' -- Subvert and siblings
   use 'https://tpope.io/vim/sleuth.git' -- match editor settings to file
   use 'https://tpope.io/vim/surround.git' -- needs no introduction
@@ -17,6 +17,13 @@ require('packer').startup(function(use)
   use 'https://github.com/pineapplegiant/spaceduck'
   use 'https://github.com/rakr/vim-one'
   use 'https://github.com/sainnhe/edge'
+
+  -- telescope
+  use {
+    'https://github.com/nvim-telescope/telescope.nvim',
+    branch = '0.1.x',
+    requires = { {'https://github.com/nvim-lua/plenary.nvim'} },
+  }
 
   -- IDE features
   use 'https://github.com/neovim/nvim-lspconfig' -- sensible default LSP configs

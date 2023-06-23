@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/luke/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/luke/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
   ["repeat.git"] = {
     loaded = true,
     path = "/Users/luke/.local/share/nvim/site/pack/packer/start/repeat.git",
@@ -138,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/luke/.local/share/nvim/site/pack/packer/start/surround.git",
     url = "https://tpope.io/vim/surround"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/luke/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["vim-one"] = {
     loaded = true,
