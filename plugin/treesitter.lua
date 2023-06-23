@@ -1,5 +1,9 @@
 -- Tree-Sitter Configuration --
 
+-- Set those options
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+
 -- Borrowed formatting from:
 -- https://github.com/nvim-treesitter/nvim-treesitter
 
@@ -21,10 +25,10 @@ require('nvim-treesitter.configs').setup {
   highlight = {
     enable = true,
     -- optimizations can be applied here if needed
-  }
+  },
+
+  indent = {
+    enable = true
+  },
 
 }
-
--- Set those options
-vim.o.foldmethod = "expr"
-vim.o.foldexpr = "nvim_treesitter#foldexpr()"
