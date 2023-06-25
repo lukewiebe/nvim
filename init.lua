@@ -1,4 +1,5 @@
 -- SETTINGS
+
 vim.o.smarttab = true
 vim.o.hlsearch = false
 vim.o.number = true
@@ -14,7 +15,8 @@ vim.cmd([[tnoremap <Esc> <C-\><C-n>]]) -- let esc exit insert mode in terminal b
 vim.o.foldmethod = "syntax" -- overridden by treesitter
 vim.o.foldlevel = 99 -- don't fold by default
 vim.o.laststatus = 1 -- Remove the statusline if there's only one window
-vim.o.autochdir = 1 -- switch active directory to current file
+-- vim.o.autochdir = 1 -- switch active directory to current file
+-- removed for Telescope to work
 
 -- TABS --
 
