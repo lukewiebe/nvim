@@ -1,3 +1,4 @@
+-- unmap space to use as a leader
 vim.keymap.set('n', ' ', '<Nop>', { silent = true, remap = false })
 -- file quick-switcher
 vim.keymap.set('n', '<space>ff', require('telescope.builtin').find_files, {})
@@ -19,5 +20,13 @@ require('telescope').setup {
 
   extensions = {
     -- extension configurations go here
+    fzf = {
+      -- copied from https://github.com/nvim-telescope/telescope-fzf-native.nvim
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+    },
   },
 }
+require('telescope').load_extension('fzf')

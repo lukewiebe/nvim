@@ -24,6 +24,12 @@ require('packer').startup(function(use)
     branch = '0.1.x',
     requires = { {'https://github.com/nvim-lua/plenary.nvim'} },
   }
+  -- fzf-native suggested install, from https://github.com/nvim-telescope/telescope-fzf-native.nvim
+  -- fzf-native extension requires `brew install cmake` in order to work.
+  -- I had to rebuild the plugin by navigating to the source directory and rerunning the build command.
+  -- source directory found using: :PackerStatus
+  -- build command copied from below
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
   -- IDE features
   use 'https://github.com/neovim/nvim-lspconfig' -- sensible default LSP configs
