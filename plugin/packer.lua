@@ -12,6 +12,7 @@ require('packer').startup(function(use)
   use 'https://tpope.io/vim/commentary.git' -- comment out stuff
   use 'https://tpope.io/vim/fugitive.git' -- git client
   use 'https://github.com/tpope/vim-vinegar.git' -- make netrw awesome
+  use 'https://github.com/andymass/vim-matchup' -- better % jumps
 
   -- colorschemes
   use 'https://github.com/pineapplegiant/spaceduck'
