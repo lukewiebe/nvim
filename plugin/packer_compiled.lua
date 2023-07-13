@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/luke/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-matchup"] = {
+    loaded = true,
+    path = "/Users/luke/.local/share/nvim/site/pack/packer/start/vim-matchup",
+    url = "https://github.com/andymass/vim-matchup"
+  },
   ["vim-one"] = {
     loaded = true,
     path = "/Users/luke/.local/share/nvim/site/pack/packer/start/vim-one",

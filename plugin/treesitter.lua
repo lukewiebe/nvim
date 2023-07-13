@@ -31,4 +31,10 @@ require('nvim-treesitter.configs').setup {
     enable = true
   },
 
+  -- Copied from https://github.com/andymass/vim-matchup#tree-sitter-integration
+  matchup = {
+    enable = true,
+    disable = {},
+  }
+
 }
