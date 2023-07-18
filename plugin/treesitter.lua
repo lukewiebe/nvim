@@ -11,6 +11,8 @@ require('nvim-treesitter.configs').setup {
   ensure_installed = {
     -- Add new languages here
     -- Source of language names: https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
+    "markdown",
+    "comment",
     "java",
     "python",
     "javascript",
