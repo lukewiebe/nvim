@@ -9,15 +9,13 @@ require('packer').startup(function(use)
   use 'https://tpope.io/vim/sleuth.git' -- match editor settings to file
   use 'https://tpope.io/vim/surround.git' -- needs no introduction
   use 'https://tpope.io/vim/repeat.git' -- dot repeat for tpope stuff
-  use 'https://tpope.io/vim/commentary.git' -- comment out stuff
+  use 'https://tpope.io/vim/commentary.git' -- add `gc` operator for comments
   use 'https://tpope.io/vim/fugitive.git' -- git client
   use 'https://github.com/tpope/vim-vinegar.git' -- make netrw awesome
   use 'https://github.com/andymass/vim-matchup' -- better % jumps
 
   -- colorschemes
   use 'https://github.com/pineapplegiant/spaceduck'
-  use 'https://github.com/rakr/vim-one'
-  use 'https://github.com/sainnhe/edge'
 
   -- telescope
   use {
