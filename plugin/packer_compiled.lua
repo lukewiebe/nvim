@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/Users/luke/.local/share/nvim/site/pack/packer/start/commentary.git",
     url = "https://tpope.io/vim/commentary"
   },
-  edge = {
-    loaded = true,
-    path = "/Users/luke/.local/share/nvim/site/pack/packer/start/edge",
-    url = "https://github.com/sainnhe/edge"
-  },
   ["fugitive.git"] = {
     loaded = true,
     path = "/Users/luke/.local/share/nvim/site/pack/packer/start/fugitive.git",
@@ -158,11 +153,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/luke/.local/share/nvim/site/pack/packer/start/vim-matchup",
     url = "https://github.com/andymass/vim-matchup"
-  },
-  ["vim-one"] = {
-    loaded = true,
-    path = "/Users/luke/.local/share/nvim/site/pack/packer/start/vim-one",
-    url = "https://github.com/rakr/vim-one"
   },
   ["vim-vinegar.git"] = {
     loaded = true,

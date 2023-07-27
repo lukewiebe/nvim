@@ -22,6 +22,7 @@ require('nvim-treesitter.configs').setup {
     "dockerfile",
     "json",
     "nix",
+    "bash",
   },
 
   highlight = {

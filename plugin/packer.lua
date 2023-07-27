@@ -33,9 +33,6 @@ require('packer').startup(function(use)
   -- IDE features
   use 'https://github.com/neovim/nvim-lspconfig' -- sensible default LSP configs
   use 'https://github.com/mfussenegger/nvim-jdtls' -- really good Java LSP integration
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
 end)
