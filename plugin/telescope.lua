@@ -1,5 +1,3 @@
--- unmap space to use as a leader
-vim.keymap.set('n', ' ', '<Nop>', { silent = true, remap = false })
 -- file quick-switcher
 vim.keymap.set('n', '<space>ff', require('telescope.builtin').find_files, {})
 -- quicksearch inside files
@@ -16,6 +14,18 @@ require('telescope').setup {
 
   pickers = {
     -- picker-specific settings go here
+    find_files = {
+      theme = "dropdown",
+    },
+    live_grep = {
+      theme = "dropdown",
+    },
+    buffers = {
+      theme = "dropdown",
+    },
+    help_tags = {
+      theme = "dropdown",
+    },
   },
 
   extensions = {
