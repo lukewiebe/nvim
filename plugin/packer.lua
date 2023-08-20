@@ -34,6 +34,5 @@ require('packer').startup(function(use)
   use 'https://github.com/neovim/nvim-lspconfig' -- sensible default LSP configs
   use 'https://github.com/mfussenegger/nvim-jdtls' -- really good Java LSP integration
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'https://github.com/sbdchd/neoformat'
 
 end)

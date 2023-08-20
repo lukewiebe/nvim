@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "/Users/luke/.local/share/nvim/site/pack/packer/start/lexima.vim",
     url = "https://github.com/cohama/lexima.vim"
   },
-  neoformat = {
-    loaded = true,
-    path = "/Users/luke/.local/share/nvim/site/pack/packer/start/neoformat",
-    url = "https://github.com/sbdchd/neoformat"
-  },
   ["nvim-jdtls"] = {
     loaded = true,
     path = "/Users/luke/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
