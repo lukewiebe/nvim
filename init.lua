@@ -17,13 +17,10 @@ vim.o.foldlevel = 99 -- don't fold by default
 vim.o.laststatus = 1 -- Remove the statusline if there's only one window
 
 vim.cmd.set("completeopt-=preview") -- disable additional info in split window
--- fixes two-line empty split appearing
+-- fixes two-line empty split appearing when using LSP hover
 
 -- unmap space to use as a leader
 vim.keymap.set('n', ' ', '<Nop>', { silent = true, remap = false })
-
--- vim.o.autochdir = 1 -- switch active directory to current file
--- removed for Telescope to work
 
 -- TABS --
 
