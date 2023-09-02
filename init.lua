@@ -19,6 +19,9 @@ vim.o.laststatus = 1 -- Remove the statusline if there's only one window
 vim.cmd.set("completeopt-=preview") -- disable additional info in split window
 -- fixes two-line empty split appearing when using LSP hover
 
+-- make netrw ignore anything in gitignore
+vim.g.netrw_list_hide = '.DS_Store'
+
 -- unmap space to use as a leader
 vim.keymap.set('n', ' ', '<Nop>', { silent = true, remap = false })
 

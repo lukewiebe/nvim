@@ -1,5 +1,5 @@
 require('lspconfig').lua_ls.setup {
-  autostart = false,
+  autostart = true,
   settings = {
     Lua = {
       runtime = {
