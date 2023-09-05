@@ -2,7 +2,7 @@
 vim.keymap.set('n', '<space>ff', require('telescope.builtin').find_files, {})
 -- quicksearch inside files
 vim.keymap.set('n', '<space>fg', require('telescope.builtin').live_grep, {})
--- buffer search?
+-- buffer search
 vim.keymap.set('n', '<space>fb', require('telescope.builtin').buffers, {})
 -- help search
 vim.keymap.set('n', '<space>fh', require('telescope.builtin').help_tags, {})

@@ -4,7 +4,8 @@ require 'paq' {
   'https://github.com/savq/paq-nvim',
 
   -- editor (sanity) modifications
-  'https://github.com/cohama/lexima.vim', -- sensible bracket autoclose behaviour
+  -- 'https://github.com/cohama/lexima.vim', -- sensible bracket autoclose behaviour
+  'https://github.com/windwp/nvim-autopairs',
   'https://tpope.io/vim/abolish.git', -- Subvert and siblings
   'https://tpope.io/vim/sleuth.git', -- match editor settings to file
   'https://tpope.io/vim/surround.git', -- needs no introduction
@@ -26,6 +27,8 @@ require 'paq' {
   
   -- IDE features
   'https://github.com/neovim/nvim-lspconfig', -- sensible default LSP configs
-  { 'https://github.com/mfussenegger/nvim-jdtls', opt = true }, -- really good Java LSP integration
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
+
+  -- Language/project specific
+  { 'https://github.com/mfussenegger/nvim-jdtls', opt = true }, -- really good Java LSP integration
 }
