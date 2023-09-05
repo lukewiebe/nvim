@@ -1,4 +1,4 @@
---  PLUGINS --
+-- PLUGINS --
 
 require('packer').startup(function(use)
   use 'https://github.com/wbthomason/packer.nvim'
@@ -9,10 +9,11 @@ require('packer').startup(function(use)
   use 'https://tpope.io/vim/sleuth.git' -- match editor settings to file
   use 'https://tpope.io/vim/surround.git' -- needs no introduction
   use 'https://tpope.io/vim/repeat.git' -- dot repeat for tpope stuff
-  use 'https://tpope.io/vim/commentary.git' -- add `gc` operator for comments
+  -- use 'https://tpope.io/vim/commentary.git' -- add `gc` operator for comments
   use 'https://tpope.io/vim/fugitive.git' -- git client
   use 'https://github.com/tpope/vim-vinegar.git' -- make netrw awesome
   use 'https://github.com/andymass/vim-matchup' -- better % jumps
+  use 'https://github.com/numToStr/Comment.nvim'
 
   -- colorschemes
   use 'https://github.com/pineapplegiant/spaceduck'
