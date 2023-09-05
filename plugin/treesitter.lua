@@ -1,7 +1,7 @@
 -- Tree-Sitter Configuration --
 
 -- Set those options
-vim.o.foldmethod = "expr"
+vim.o.foldmethod = "expr" -- overrides 'syntax' in init.lua
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- Borrowed formatting from:
@@ -23,6 +23,10 @@ require('nvim-treesitter.configs').setup {
     "json",
     "nix",
     "bash",
+    "git_rebase",
+    "gitcommit",
+    "gitignore",
+    "jq",
   },
 
   highlight = {
