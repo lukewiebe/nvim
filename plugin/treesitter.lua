@@ -27,7 +27,12 @@ require('nvim-treesitter.configs').setup {
     "gitcommit",
     "gitignore",
     "jq",
+    "regex",
+    "sql",
+    "vim",
   },
+
+  auto_install = true,
 
   highlight = {
     enable = true,
@@ -35,7 +40,7 @@ require('nvim-treesitter.configs').setup {
   },
 
   indent = {
-    enable = true
+    enable = true,
   },
 
   -- Copied from https://github.com/andymass/vim-matchup#tree-sitter-integration
