@@ -15,11 +15,10 @@ vim.cmd([[tnoremap <Esc> <C-\><C-n>]]) -- let esc exit insert mode in terminal b
 vim.o.foldmethod = "syntax" -- overridden by treesitter when applicable
 vim.o.foldlevel = 99 -- don't fold by default
 vim.o.laststatus = 1 -- Remove the statusline if there's only one window
+vim.o.completeopt = "longest,menu"
+vim.o.formatoptions = "jcrql" -- default except o is removed, comments no longer form on normal o
 
-vim.cmd.set("completeopt-=preview") -- disable additional info in split window
--- fixes two-line empty split appearing when using LSP hover
-
--- make netrw ignore anything in gitignore
+-- make netrw ignore those finder files
 vim.g.netrw_list_hide = '.DS_Store'
 
 -- unmap space to use as a leader
