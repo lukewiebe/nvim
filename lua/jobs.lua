@@ -1,1 +1,0 @@
--- An opinionated job runner for Neovim
