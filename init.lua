@@ -37,3 +37,4 @@ require 'diagnostic'
 require 'del_user_command'
 require 'npm_dev'
 require 'npm_wrapper'
+require 'jobby' -- wooooo

@@ -30,6 +30,7 @@ require('nvim-treesitter.configs').setup {
     "regex",
     "sql",
     "vim",
+    "r",
   },
 
   auto_install = true,
