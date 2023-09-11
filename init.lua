@@ -1,7 +1,8 @@
 -- SETTINGS
 
 vim.o.smarttab = true
-vim.o.hlsearch = false
+vim.o.hlsearch = true -- test drive
+											-- reminder: CTRL-L sets :nohls
 vim.o.number = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
