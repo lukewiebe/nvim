@@ -1,2 +1,2 @@
 -- For now, just copy the R configuration
-require "R"
+require("after/ftplugin/markdown.lua")
