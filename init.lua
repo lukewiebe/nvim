@@ -20,7 +20,7 @@ vim.o.completeopt = "longest,menu"
 vim.o.formatoptions = "jcrql" -- default except o is removed, comments no longer form on normal o
 
 -- make netrw ignore those finder files
-vim.g.netrw_list_hide = '.DS_Store'
+-- vim.g.netrw_list_hide = '.DS_Store'
 
 -- unmap space to use as a leader
 vim.keymap.set('n', ' ', '<Nop>', { silent = true, remap = false })
