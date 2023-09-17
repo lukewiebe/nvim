@@ -4,19 +4,19 @@ require 'paq' {
   'https://github.com/savq/paq-nvim',
 
   -- editor (sanity) modifications
-  -- 'https://github.com/cohama/lexima.vim', -- sensible bracket autoclose behaviour
-  'https://github.com/windwp/nvim-autopairs',
+  'https://github.com/windwp/nvim-autopairs', -- sensible bracket autoclose behaviour
   'https://tpope.io/vim/abolish.git', -- Subvert and siblings
   'https://tpope.io/vim/sleuth.git', -- match editor settings to file
   'https://tpope.io/vim/surround.git', -- needs no introduction
   'https://tpope.io/vim/repeat.git', -- dot repeat for tpope stuff
   'https://tpope.io/vim/fugitive.git', -- git client
-  'https://github.com/tpope/vim-vinegar.git', -- make netrw awesome
+  -- 'https://github.com/tpope/vim-vinegar.git', -- make netrw awesome
+  'https://github.com/stevearc/oil.nvim',
   'https://github.com/andymass/vim-matchup', -- better % jumps
   'https://github.com/numToStr/Comment.nvim', -- gc operator for comments
 
   -- colorschemes
-  'https://github.com/pineapplegiant/spaceduck',
+  'https://github.com/pineapplegiant/spaceduck', -- my forever colorscheme
 
   -- telescope
   'https://github.com/nvim-lua/plenary.nvim', -- required for telescope
