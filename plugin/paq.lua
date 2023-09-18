@@ -10,8 +10,7 @@ require 'paq' {
   'https://tpope.io/vim/surround.git', -- needs no introduction
   'https://tpope.io/vim/repeat.git', -- dot repeat for tpope stuff
   'https://tpope.io/vim/fugitive.git', -- git client
-  -- 'https://github.com/tpope/vim-vinegar.git', -- make netrw awesome
-  'https://github.com/stevearc/oil.nvim',
+  'https://github.com/stevearc/oil.nvim', -- replace netrw with a better pane file explorer
   'https://github.com/andymass/vim-matchup', -- better % jumps
   'https://github.com/numToStr/Comment.nvim', -- gc operator for comments
 
