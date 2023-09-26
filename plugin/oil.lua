@@ -17,6 +17,7 @@ require("oil").setup({
     ["gs"] = "actions.change_sort",
     ["g."] = "actions.toggle_hidden",
     ["y."] = "actions.copy_entry_path",
+    ["gx"] = "actions.open_external",
   },
   view_options = {
     show_hidden = true,

@@ -36,7 +36,7 @@ vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
 -- User Commands
 -- These will be sourced here instead of automatically, so I don't get unfinished garbage in my nvim.
 require 'diagnostic'
-require 'del_user_command'
-require 'npm_dev'
-require 'npm_wrapper'
-require 'jobby' -- wooooo
+-- require 'del_user_command'
+-- require 'npm_dev'
+-- require 'npm_wrapper'
+-- require 'jobby' -- wooooo
