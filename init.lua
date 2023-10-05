@@ -24,7 +24,7 @@ vim.o.formatoptions = "jcrql" -- default except o is removed, comments no longer
 -- vim.g.netrw_list_hide = '.DS_Store'
 
 -- unmap space to use as a leader
-vim.keymap.set('n', ' ', '<Nop>', { silent = true, remap = false })
+vim.keymap.set('n', ' ', '<Nop>', { silent = true })
 
 -- TABS --
 
