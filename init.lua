@@ -1,8 +1,7 @@
 -- SETTINGS
 
 vim.o.smarttab = true
-vim.o.hlsearch = true -- test drive
-											-- reminder: CTRL-L sets :nohls
+vim.o.hlsearch = true
 vim.o.number = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -17,16 +16,14 @@ vim.o.foldmethod = "syntax" -- overridden by treesitter when applicable
 vim.o.foldlevel = 99 -- don't fold by default
 vim.o.laststatus = 1 -- Remove the statusline if there's only one window
 vim.o.completeopt = "longest,menu"
-vim.o.formatoptions = "jcrql" -- default except o is removed, comments no longer form on normal o
+-- vim.opt.formatoptions:remove("o")
+-- this option is overridden by many filetype plugins
+-- there is no easy way to override them cleanly
 
--- make netrw ignore those finder files
--- vim.g.netrw_list_hide = '.DS_Store'
-
--- unmap space to use as a leader
+-- unmap space to use as an alternate leader
 vim.keymap.set('n', ' ', '<Nop>', { silent = true })
 
 -- TABS --
-
 -- overridden by vim-sleuth or language configs in some cases
 vim.o.tabstop = 2
 vim.o.softtabstop = -1 -- when negative, value of tabstop is used
