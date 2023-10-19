@@ -24,7 +24,7 @@ require 'paq' {
 
   -- fzf-native suggested install, from https://github.com/nvim-telescope/telescope-fzf-native.nvim
   { 'https://github.com/nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-  
+
   -- IDE features
   'https://github.com/neovim/nvim-lspconfig', -- sensible default LSP configs
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
@@ -32,4 +32,7 @@ require 'paq' {
   -- Language/project specific
   { 'https://github.com/mfussenegger/nvim-jdtls', opt = true }, -- really good Java LSP integration
   { 'https://github.com/jalvesaq/Nvim-R', opt = true },
+
+  -- trial
+  'https://github.com/stevearc/overseer.nvim',
 }
