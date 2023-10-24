@@ -29,6 +29,6 @@ vim.o.tabstop = 2
 vim.o.softtabstop = -1 -- when negative, value of tabstop is used
 vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
 
--- User Commands
+-- User Modules(?)
 -- These will be sourced here instead of automatically, so I don't get unfinished garbage in my nvim.
 require 'diagnostic_toggle'
