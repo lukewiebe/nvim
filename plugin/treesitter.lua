@@ -26,6 +26,7 @@ require('nvim-treesitter.configs').setup {
     "git_rebase",
     "gitcommit",
     "gitignore",
+    "git_config",
     "jq",
     "regex",
     "sql",
