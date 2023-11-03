@@ -13,7 +13,7 @@ require 'paq' {
   'https://github.com/stevearc/oil.nvim', -- replace netrw with a better pane file explorer
   'https://github.com/andymass/vim-matchup', -- better % jumps
   'https://github.com/numToStr/Comment.nvim', -- gc operator for comments
-  'https://github.com/josa42/nvim-gx',
+  'https://github.com/chrishrb/gx.nvim',
 
   -- colorschemes
   'https://github.com/pineapplegiant/spaceduck', -- my forever colorscheme
