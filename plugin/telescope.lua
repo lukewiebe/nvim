@@ -1,11 +1,11 @@
 -- file quick-switcher
-vim.keymap.set('n', '<space>ff', require('telescope.builtin').find_files, {})
+vim.keymap.set('n', '<space>sf', require('telescope.builtin').find_files, {})
 -- quicksearch inside files
-vim.keymap.set('n', '<space>fg', require('telescope.builtin').live_grep, {})
+vim.keymap.set('n', '<space>sg', require('telescope.builtin').live_grep, {})
 -- buffer search
-vim.keymap.set('n', '<space>fb', require('telescope.builtin').buffers, {})
+vim.keymap.set('n', '<space>sb', require('telescope.builtin').buffers, {})
 -- help search
-vim.keymap.set('n', '<space>fh', require('telescope.builtin').help_tags, {})
+vim.keymap.set('n', '<space>sh', require('telescope.builtin').help_tags, {})
 
 require('telescope').setup {
   defaults = {
