@@ -7,7 +7,7 @@ vim.keymap.set('n', '<space>sb', require('telescope.builtin').buffers, {})
 -- help search
 vim.keymap.set('n', '<space>sh', require('telescope.builtin').help_tags, {})
 
-require('telescope').setup {
+require('telescope').setup({
   defaults = {
     -- default settings go here
   },
@@ -38,5 +38,6 @@ require('telescope').setup {
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
     },
   },
-}
+})
+
 require('telescope').load_extension('fzf')
