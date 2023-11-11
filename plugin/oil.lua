@@ -11,9 +11,8 @@ require("oil").setup({
     ["<C-c>"] = "actions.close",
     ["<C-l>"] = "actions.refresh",
     ["-"] = "actions.parent",
-    ["_"] = "actions.open_cwd",
+    ["~"] = "actions.open_cwd",
     ["`"] = "actions.cd",
-    ["~"] = "actions.tcd",
     ["gs"] = "actions.change_sort",
     ["g."] = "actions.toggle_hidden",
     ["y."] = "actions.copy_entry_path",
@@ -23,7 +22,7 @@ require("oil").setup({
     show_hidden = true,
     is_always_hidden = function(name, bufnr)
       -- if this function returns true for a filename, hide that item
-      return name == '.DS_Store'
+      return name == '.DS_Store' or name == '..'
     end
   }
 })
