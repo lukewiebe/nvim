@@ -3,6 +3,7 @@
 require('conform').setup({
   formatters_by_ft = {
     javascript = { { 'prettierd', 'prettier' } }
+    java = { 'google-java-format' }
     -- add more filetypes here
   },
   format_on_save = {
