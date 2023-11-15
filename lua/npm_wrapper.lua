@@ -2,7 +2,6 @@
 
 -- ideas:
 
-
 job_id = nil -- set global var
 vim.api.nvim_create_user_command("Npm", function()
 	job_id = vim.fn.jobstart({ "npm", "run", "dev" }, {
@@ -12,7 +11,7 @@ vim.api.nvim_create_user_command("Npm", function()
 			vim.notify(s) -- throw up a notification at the bottom
 		end,
 	})
-end, {nargs = 0})
+end, { nargs = 0 })
 
 vim.api.nvim_create_user_command("NpmStop", function()
 	local job_exit = vim.fn.jobstop(job_id)
@@ -21,4 +20,4 @@ vim.api.nvim_create_user_command("NpmStop", function()
 	else
 		vim.notify("Invalid job number: " .. job_exit)
 	end
-end, {nargs = 0})
+end, { nargs = 0 })

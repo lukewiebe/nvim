@@ -6,7 +6,7 @@ vim.o.number = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.smartindent = true
-vim.o.mouse = '' -- disable mouse, hahaha
+vim.o.mouse = "" -- disable mouse, hahaha
 vim.o.undofile = true
 vim.o.splitright = true -- new vertical splits show up on the right side
 vim.o.splitbelow = true -- new horizonal splits appear on the bottom
@@ -21,7 +21,7 @@ vim.o.completeopt = "longest,menu"
 -- there is no easy way to override them cleanly
 
 -- unmap space to use as an alternate leader
-vim.keymap.set('n', ' ', '<Nop>', { silent = true })
+vim.keymap.set("n", " ", "<Nop>", { silent = true })
 
 -- TABS --
 -- overridden by vim-sleuth or language configs in some cases
@@ -31,4 +31,4 @@ vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
 
 -- My own lua modules
 -- These will be sourced here instead of automatically, so I don't get unfinished garbage in my config.
-require 'diagnostic_toggle'
+require("diagnostic_toggle")

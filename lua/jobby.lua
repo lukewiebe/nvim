@@ -41,9 +41,9 @@ local run_job_on_save = function(user_input)
 	local command_to_run = vim.fn.expandcmd(user_input)
 
 	-- start the job
-	vim.api.nvim_create_autocmd({"BufWritePost"}, {
+	vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 		group = vim.api.nvim_create_augroup("JobbyRunOnSave", { clear = true }),
-		pattern = vim.fn.expand('%:t'), -- current buffer filename
+		pattern = vim.fn.expand("%:t"), -- current buffer filename
 		callback = function()
 			-- all output is important, so capture stdout and stderr to buffer and notify
 			vim.fn.jobstart(command_to_run, {

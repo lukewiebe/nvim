@@ -1,3 +1,3 @@
-require('lspconfig').tailwindcss.setup {
-    autostart = true
-}
+require("lspconfig").tailwindcss.setup({
+	autostart = true,
+})
