@@ -1,15 +1,16 @@
 -- https://github.com/stevearc/conform.nvim
 
-require('conform').setup({
-  formatters_by_ft = {
-    javascript = { { 'prettierd', 'prettier' } }
-    java = { 'google-java-format' }
-    -- add more filetypes here
-  },
-  format_on_save = {
-    timeout_ms = 500,
-    lsp_fallback = true,
-  }
+require("conform").setup({
+	formatters_by_ft = {
+		javascript = { { "prettierd", "prettier" } },
+		java = { "google-java-format" },
+		lua = { "stylua" },
+		-- add more filetypes here
+	},
+	format_on_save = {
+		timeout_ms = 500,
+		lsp_fallback = true,
+	},
 })
 
 -- this is a way to use conform's formatter
