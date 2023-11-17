@@ -1,6 +1,6 @@
 -- User command to toggle diagnostics
 
-vim.api.nvim_create_user_command("DiagnosticToggle", function()
+vim.keymap.set("n", "<leader>d", function()
 	local diag_disabled = vim.diagnostic.is_disabled()
 	if diag_disabled then
 		vim.diagnostic.enable()
@@ -9,4 +9,4 @@ vim.api.nvim_create_user_command("DiagnosticToggle", function()
 		vim.diagnostic.disable()
 		print("Diagnostics disabled")
 	end
-end, { nargs = 0 })
+end)
