@@ -1,6 +1,4 @@
 -- https://github.com/stevearc/conform.nvim
--- Format disable user commands added from:
--- https://github.com/stevearc/conform.nvim/blob/master/doc/recipes.md#command-to-toggle-format-on-save
 
 require("conform").setup({
 	formatters_by_ft = {
@@ -18,6 +16,7 @@ require("conform").setup({
 	end,
 })
 
+-- source: https://github.com/stevearc/conform.nvim/blob/master/doc/recipes.md#command-to-toggle-format-on-save
 vim.api.nvim_create_user_command("FormatDisable", function(args)
 	if args.bang then
 		vim.b.disable_autoformat = true
