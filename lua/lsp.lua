@@ -1,8 +1,5 @@
 -- Global LSP Configuration --
 
-vim.diagnostic.disable() -- turn off all inline diagnostics.
--- use vim.diagnostic.enable() to restart them.
-
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
 	callback = function(args)

@@ -31,5 +31,6 @@ vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
 
 -- My own lua modules
 -- These will be sourced here instead of automatically, so I don't get unfinished garbage in my config.
-require("diagnostic_toggle")
+require("diagnostics")
 require("quickfix")
+require("lsp")
