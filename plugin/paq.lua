@@ -40,4 +40,5 @@ require("paq")({
 	"https://github.com/stevearc/overseer.nvim",
 	"https://github.com/stevearc/conform.nvim",
 	"https://github.com/windwp/nvim-ts-autotag",
+	"https://github.com/stevearc/dressing.nvim",
 })
