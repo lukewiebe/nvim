@@ -1,5 +1,9 @@
 -- Jobby.nvim: A tiny, opinionated job runner for Neovim --
 
+-- TODO:
+-- Switch vars from buffer-local to global
+-- Switch to using a terminal buffer instead of a custom solution
+
 local create_job_buf = function(jobname)
 	local buf = vim.api.nvim_create_buf(true, true) -- scratch buffer in buflist
 	jobname = "Jobby: " .. jobname
