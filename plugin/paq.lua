@@ -1,4 +1,4 @@
--- PLUGINS --
+-- https://github.com/savq/paq-nvim
 
 require("paq")({
 	"https://github.com/savq/paq-nvim",
