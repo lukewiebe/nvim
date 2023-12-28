@@ -1,3 +1,5 @@
+-- https://github.com/nvim-telescope/telescope.nvim
+
 -- file quick-switcher
 vim.keymap.set("n", "<space>sf", require("telescope.builtin").find_files, {})
 -- quicksearch inside files
