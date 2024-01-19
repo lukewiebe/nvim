@@ -1,18 +1,34 @@
 -- https://github.com/stevearc/conform.nvim
 
+-- copied configuration from
+-- https://github.com/stevearc/conform.nvim/blob/master/doc/recipes.md#automatically-run-slow-formatters-async
+-- for running slow formatters async (i.e. Java)
+local slow_filetypes = {}
+
 require("conform").setup({
 	formatters_by_ft = {
 		javascript = { { "prettierd", "prettier" } },
 		java = { "google-java-format" },
 		lua = { "stylua" },
-		r = { "styler" },
-		-- add more filetypes here
+		-- r = { "styler" },
+		c = { "astyle" },
 	},
-	format_on_save = function(bufnr)
-		if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+	format_on_save = function(buf)
+		if slow_filetypes[vim.bo[buf].filetype] then
 			return
 		end
-		return { timeout_ms = 500, lsp_fallback = true }
+		local on_format = function(err)
+			if err and err:match("timeout$") then
+				slow_filetypes[vim.bo[buf].filetype] = true
+			end
+		end
+		return { timeout_ms = 200, lsp_fallback = true }, on_format
+	end,
+	format_after_save = function(buf)
+		if not slow_filetypes[vim.bo[buf].filetype] then
+			return
+		end
+		return { lsp_fallback = true }
 	end,
 })
 
