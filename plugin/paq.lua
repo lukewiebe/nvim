@@ -37,7 +37,7 @@ require("paq")({
 	"https://github.com/stevearc/conform.nvim", -- formatter
 
 	-- Language/project specific
-	{ "https://github.com/mfussenegger/nvim-jdtls", opt = true }, -- really good Java LSP integration
+	"https://github.com/mfussenegger/nvim-jdtls", -- really good Java LSP integration
 
 	-- trial
 	"https://github.com/stevearc/overseer.nvim",
