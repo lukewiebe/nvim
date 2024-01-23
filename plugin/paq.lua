@@ -40,6 +40,6 @@ require("paq")({
 	"https://github.com/mfussenegger/nvim-jdtls", -- really good Java LSP integration
 
 	-- trial
-	"https://github.com/stevearc/overseer.nvim",
-	"https://github.com/stevearc/dressing.nvim",
+	"https://github.com/stevearc/overseer.nvim", -- job control
+	"https://github.com/stevearc/dressing.nvim", -- simple UI improvement
 })
