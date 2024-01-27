@@ -10,7 +10,7 @@ vim.o.mouse = "" -- disable mouse, hahaha
 vim.o.undofile = true
 vim.o.splitright = true -- new vertical splits show up on the right side
 vim.o.splitbelow = true -- new horizonal splits appear on the bottom
-vim.o.scrolloff = 5 -- show context, matches defaults.vim
+vim.o.scrolloff = 5 -- keep the cursor off the top or bottom of the window
 vim.cmd.tnoremap("<Esc>", "<C-\\><C-n>") -- let esc exit insert mode in terminal buffer
 vim.o.foldmethod = "syntax" -- overridden by treesitter when applicable
 vim.o.foldlevel = 99 -- don't fold by default

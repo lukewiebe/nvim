@@ -1,7 +1,7 @@
 -- https://github.com/numToStr/Comment.nvim
 
 require("Comment").setup({
-	extra = { eol = "gca" },
+	extra = { eol = "gcA" },
 	-- integrate with ts_context_commentstring as per
 	-- https://github.com/JoosepAlviste/nvim-ts-context-commentstring/wiki/Integrations#commentnvim
 	pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
