@@ -33,3 +33,4 @@ vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
 require("diagnostics")
 require("quickfix")
 require("lsp")
+require("finder")
