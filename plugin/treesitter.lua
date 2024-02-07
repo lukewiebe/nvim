@@ -49,6 +49,7 @@ require("nvim-treesitter.configs").setup({
 	matchup = {
 		enable = true,
 		disable = {},
+		include_matched_words = true,
 	},
 
 	-- Config for https://github.com/nvim-treesitter/nvim-treesitter-textobjects
