@@ -1,5 +1,6 @@
--- source: https://github.com/stevearc/oil.nvim
+-- https://github.com/stevearc/oil.nvim
 -- most settings copied from readme
+
 require("oil").setup({
 	keymaps = {
 		["g?"] = "actions.show_help",
@@ -29,3 +30,6 @@ require("oil").setup({
 
 -- recreate vinegar's hyphen map
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+vim.api.nvim_create_user_command("Soil", "split | Oil", { desc = "Open Oil in a horizontal split" })
+vim.api.nvim_create_user_command("Voil", "vsplit | Oil", { desc = "Open Oil in a vertical split" })
