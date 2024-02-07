@@ -7,6 +7,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.smartindent = true
 vim.o.mouse = "" -- disable mouse, hahaha
+vim.o.mousescroll = "ver:1,hor:1" -- scrolling moves one line for smooth trackpad scrolling
 vim.o.undofile = true
 vim.o.splitright = true -- new vertical splits show up on the right side
 vim.o.splitbelow = true -- new horizonal splits appear on the bottom
@@ -34,3 +35,7 @@ require("diagnostics")
 require("quickfix")
 require("lsp")
 require("finder")
+
+-- trial
+vim.o.autowrite = true
+vim.o.relativenumber = true
