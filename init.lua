@@ -35,7 +35,8 @@ require("diagnostics")
 require("quickfix")
 require("lsp")
 require("finder")
+require("cd")
 
 -- trial
 vim.o.autowrite = true
-vim.o.relativenumber = true
+vim.o.cursorline = true
