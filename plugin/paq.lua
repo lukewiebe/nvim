@@ -42,4 +42,5 @@ require("paq")({
 	-- trial
 	"https://github.com/stevearc/overseer.nvim", -- job control
 	"https://github.com/stevearc/dressing.nvim", -- simple UI improvement
+	"https://github.com/tpope/vim-rhubarb", -- github addition to fugitive
 })
