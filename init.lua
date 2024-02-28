@@ -20,6 +20,7 @@ vim.o.completeopt = "longest,menu"
 -- vim.opt.formatoptions:remove("o")
 -- this option is overridden by many filetype plugins
 -- there is no easy way to override them cleanly
+vim.o.autowrite = true
 
 -- unmap space to use as an alternate leader
 vim.keymap.set("n", " ", "<Nop>", { silent = true })
@@ -38,5 +39,4 @@ require("finder")
 require("cd")
 
 -- trial
-vim.o.autowrite = true
 vim.o.cursorline = true
