@@ -14,11 +14,11 @@ vim.keymap.set("n", "<leader>dd", function()
 	end
 end, { desc = "Toggle all diagnostics" })
 
-vim.keymap.set("n", "<leader>dn", function()
+vim.keymap.set("n", "]d", function()
 	vim.diagnostic.goto_next()
 end, { desc = "goto next diagnostic" })
 
-vim.keymap.set("n", "<leader>dp", function()
+vim.keymap.set("n", "[d", function()
 	vim.diagnostic.goto_prev()
 end, { desc = "goto previous diagnostic" })
 
@@ -26,7 +26,6 @@ vim.keymap.set("n", "<leader>do", function()
 	vim.diagnostic.open_float()
 end, { desc = "open diagnostic under the cursor in a floating window" })
 
--- this errors sometimes, not sure why
 vim.keymap.set("n", "<leader>dq", function()
-	vim.diagnostics.setqflist()
+	vim.diagnostic.setqflist()
 end, { desc = "send diagnostics to quickfix list" })

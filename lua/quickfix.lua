@@ -2,5 +2,6 @@
 
 -- bindings to move to next and previous quickfix entries
 -- stolen from https://github.com/tpope/vim-unimpaired
-vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { silent = true })
-vim.keymap.set("n", "[q", "<cmd>cprevious<CR>", { silent = true })
+vim.keymap.set("n", "]q", "<cmd>cnext<cr>", { silent = true })
+vim.keymap.set("n", "[q", "<cmd>cprevious<cr>", { silent = true })
+vim.keymap.set("n", "<space>qq", "<cmd>copen<cr>", { silent = true })
