@@ -33,7 +33,7 @@ require("conform").setup({
 })
 
 -- source: https://github.com/stevearc/conform.nvim/blob/master/doc/recipes.md#command-to-toggle-format-on-save
-vim.api.nvim_create_user_command("FormatDisable", function(args)
+vim.api.nvim_create_user_command("ConformDisable", function(args)
 	if args.bang then
 		vim.b.disable_autoformat = true
 	else
@@ -44,7 +44,7 @@ end, {
 	bang = true,
 })
 
-vim.api.nvim_create_user_command("FormatEnable", function(args)
+vim.api.nvim_create_user_command("ConformEnable", function(args)
 	vim.b.disable_autoformat = false
 	vim.g.disable_autoformat = false
 end, {
