@@ -37,6 +37,8 @@ require("quickfix")
 require("lsp")
 require("finder")
 require("cd")
+require("hex")
+require("snip_edit")
 
 -- trial
 vim.o.cursorline = true
