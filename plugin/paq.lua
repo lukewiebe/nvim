@@ -15,7 +15,6 @@ require("paq")({
 	"https://github.com/numToStr/Comment.nvim", -- gc operator for comments
 	"https://github.com/chrishrb/gx.nvim",
 
-	-- colorschemes
 	"https://github.com/pineapplegiant/spaceduck", -- my forever colorscheme
 
 	-- telescope
@@ -44,4 +43,5 @@ require("paq")({
 	"https://github.com/stevearc/dressing.nvim", -- simple UI improvement
 	"https://github.com/tpope/vim-rhubarb", -- github addition to fugitive
 	"https://github.com/dcampos/nvim-snippy", -- minimal snippet plugin
+	"https://github.com/NvChad/nvim-colorizer.lua", -- show tailwind colors inline
 })
