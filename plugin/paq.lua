@@ -44,4 +44,5 @@ require("paq")({
 	"https://github.com/tpope/vim-rhubarb", -- github addition to fugitive
 	"https://github.com/dcampos/nvim-snippy", -- minimal snippet plugin
 	"https://github.com/NvChad/nvim-colorizer.lua", -- show tailwind colors inline
+	"https://github.com/folke/todo-comments.nvim",
 })
