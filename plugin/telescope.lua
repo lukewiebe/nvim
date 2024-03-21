@@ -8,6 +8,8 @@ vim.keymap.set("n", "<space>sg", require("telescope.builtin").live_grep, {})
 vim.keymap.set("n", "<space>sb", require("telescope.builtin").buffers, {})
 -- help search
 vim.keymap.set("n", "<space>sh", require("telescope.builtin").help_tags, {})
+-- resume serach
+vim.keymap.set("n", "<space>sp", require("telescope.builtin").resume, {})
 
 require("telescope").setup({
 	defaults = {
