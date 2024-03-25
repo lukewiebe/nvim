@@ -2,10 +2,7 @@
 
 require("colorizer").setup({
 	filetypes = {
-		"css",
-		"javascript",
-		"html",
-		"liquid",
+		"*",
 	},
 	user_default_options = {
 		tailwind = true,
