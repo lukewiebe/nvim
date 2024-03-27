@@ -23,7 +23,11 @@ require("oil").setup({
 		show_hidden = true,
 		is_always_hidden = function(name, bufnr)
 			-- if this function returns true for a filename, hide that item
-			return name == ".DS_Store" or name == ".."
+			local ignore = {
+				".DS_Store",
+				"..",
+			}
+			return vim.tbl_contains(ignore, name)
 		end,
 	},
 })
