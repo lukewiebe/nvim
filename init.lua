@@ -32,13 +32,11 @@ vim.o.softtabstop = -1 -- when negative, value of tabstop is used
 vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
 
 -- My own lua modules
-require("diagnostics")
-require("quickfix")
 require("lsp")
-require("finder")
+require("quickfix")
+require("diagnostics")
 require("cd")
-require("hex")
-require("snip_edit")
+require("finder")
 
 -- trial
 vim.o.cursorline = true
