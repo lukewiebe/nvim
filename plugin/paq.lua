@@ -39,7 +39,6 @@ require("paq")({
 	"https://github.com/mfussenegger/nvim-jdtls", -- really good Java LSP integration
 
 	-- trial
-	"https://github.com/stevearc/overseer.nvim", -- job control
 	"https://github.com/stevearc/dressing.nvim", -- simple UI improvement
 	"https://github.com/tpope/vim-rhubarb", -- github addition to fugitive
 	"https://github.com/dcampos/nvim-snippy", -- minimal snippet plugin
