@@ -1,3 +1,5 @@
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
+
 require("lspconfig").lua_ls.setup({
 	autostart = true,
 	settings = {
