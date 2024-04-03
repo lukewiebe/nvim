@@ -4,15 +4,14 @@
 vim.diagnostic.disable() -- diagnostics are off by default
 
 vim.keymap.set("n", "<leader>dd", function()
-	local diag_disabled = vim.diagnostic.is_disabled()
-	if diag_disabled then
+	if vim.diagnostic.is_disabled() then
 		vim.diagnostic.enable()
 		print("Diagnostics enabled")
 	else
 		vim.diagnostic.disable()
 		print("Diagnostics disabled")
 	end
-end, { desc = "Toggle all diagnostics" })
+end, { desc = "toggle all diagnostics" })
 
 vim.keymap.set("n", "]d", function()
 	vim.diagnostic.goto_next()
