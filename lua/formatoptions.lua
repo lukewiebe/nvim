@@ -5,7 +5,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	group = vim.api.nvim_create_augroup("FormatOptions", { clear = true }),
 	pattern = "*",
 	callback = function()
-		vim.cmd.set("formatoptions-=o")
+		vim.cmd.set("formatoptions-=o") -- no comment on o and O
 	end,
 })
 

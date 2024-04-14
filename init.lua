@@ -17,9 +17,6 @@ vim.o.foldmethod = "syntax" -- overridden by treesitter when applicable
 vim.o.foldlevel = 99 -- don't fold by default
 vim.o.laststatus = 1 -- Remove the statusline if there's only one window
 vim.o.completeopt = "longest,menu"
--- vim.opt.formatoptions:remove("o")
--- this option is overridden by many filetype plugins
--- there is no easy way to override them cleanly
 vim.o.autowrite = true
 vim.o.cursorline = true
 
