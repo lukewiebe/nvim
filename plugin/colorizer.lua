@@ -8,5 +8,6 @@ require("colorizer").setup({
 		tailwind = true,
 		rgb_fn = true,
 		hsl_fn = true,
+		names = false,
 	},
 })

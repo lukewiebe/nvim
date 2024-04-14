@@ -18,7 +18,7 @@ end
 
 -- autocmd fires when spaceduck is activated
 vim.api.nvim_create_autocmd("ColorScheme", {
-	group = vim.api.nvim_create_augroup("EditColorScheme", { clear = true }),
+	group = vim.api.nvim_create_augroup("SpaceDuck", { clear = true }),
 	pattern = "spaceduck",
 	callback = edit_colorscheme,
 })

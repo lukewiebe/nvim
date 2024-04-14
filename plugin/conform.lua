@@ -50,6 +50,3 @@ vim.api.nvim_create_user_command("ConformEnable", function(args)
 end, {
 	desc = "Re-enable autoformat on save",
 })
-
--- this is a way to use conform's formatter
--- vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
