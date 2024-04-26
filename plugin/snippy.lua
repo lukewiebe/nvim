@@ -1,9 +1,6 @@
 -- https://github.com/dcampos/nvim-snippy
 
-local loaded, snippy = pcall(require, "snippy")
-if not loaded then return end
-
-snippy.setup({
+require("snippy").setup({
 	mappings = {
 		is = {
 			["<c-k>"] = "expand_or_advance",

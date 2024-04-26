@@ -1,9 +1,6 @@
 -- https://github.com/chrishrb/gx.nvim
 
-local loaded, gx = pcall(require, "gx")
-if not loaded then return end
-
-gx.setup({
+require("gx").setup({
 	handlers = {
 		search = false,
 	},

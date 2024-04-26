@@ -1,6 +1,3 @@
-local loaded, autopairs = pcall(require, "autopairs")
-if not loaded then return end
-
 require("nvim-autopairs").setup({})
 
 -- from https://github.com/windwp/nvim-autopairs
