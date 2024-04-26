@@ -18,7 +18,7 @@ paq({
 	"https://github.com/numToStr/Comment.nvim", -- gc operator for comments
 	"https://github.com/chrishrb/gx.nvim",
 
-	"https://github.com/pineapplegiant/spaceduck", -- my forever colorscheme
+	{ "https://github.com/spaceduck-theme/nvim", as = "spaceduck" }, -- my forever colorscheme
 
 	-- telescope
 	"https://github.com/nvim-lua/plenary.nvim", -- required for telescope
