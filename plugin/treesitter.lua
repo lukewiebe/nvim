@@ -1,5 +1,8 @@
 -- Tree-Sitter Configuration --
 
+local loaded, treesitter = pcall(require, "nvim-treesitter")
+if not loaded then return end
+
 -- Set those options
 vim.o.foldmethod = "expr" -- overrides 'syntax' in init.lua
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"

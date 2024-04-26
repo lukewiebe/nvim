@@ -1,9 +1,9 @@
 -- https://github.com/NvChad/nvim-colorizer.lua
 
-require("colorizer").setup({
-	filetypes = {
-		"*",
-	},
+local loaded, colorizer = pcall(require, "colorizer")
+if not loaded then return end
+
+colorizer.setup({
 	user_default_options = {
 		tailwind = true,
 		rgb_fn = true,

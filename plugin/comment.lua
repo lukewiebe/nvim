@@ -1,6 +1,9 @@
 -- https://github.com/numToStr/Comment.nvim
 
-require("Comment").setup({
+local loaded, comment = pcall(require, "Comment")
+if not loaded then return end
+
+comment.setup({
 	extra = { eol = "gcA" },
 	-- integrate with ts_context_commentstring as per
 	-- https://github.com/JoosepAlviste/nvim-ts-context-commentstring/wiki/Integrations#commentnvim
@@ -9,6 +12,10 @@ require("Comment").setup({
 
 -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring
 -- adds intelligent comments in complicated nested languages
-require("ts_context_commentstring").setup({
+
+local loaded, ts_context_commentstring = pcall(require, "ts_context_commentstring")
+if not loaded then return end
+
+ts_context_commentstring.setup({
 	enable_autocmd = false,
 })

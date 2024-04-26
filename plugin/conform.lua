@@ -1,11 +1,14 @@
 -- https://github.com/stevearc/conform.nvim
 
+local loaded, conform = pcall(require, "conform")
+if not loaded then return end
+
 -- copied configuration from
 -- https://github.com/stevearc/conform.nvim/blob/master/doc/recipes.md#automatically-run-slow-formatters-async
 -- for running slow formatters async (i.e. Java)
 local slow_filetypes = {}
 
-require("conform").setup({
+conform.setup({
 	formatters_by_ft = {
 		javascript = { { "prettierd", "prettier" } },
 		java = { "google-java-format" },

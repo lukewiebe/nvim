@@ -1,7 +1,10 @@
 -- https://github.com/stevearc/oil.nvim
 -- most settings copied from readme
 
-require("oil").setup({
+local loaded, oil = pcall(require, "oil")
+if not loaded then return end
+
+oil.setup({
 	keymaps = {
 		["g?"] = "actions.show_help",
 		["<CR>"] = "actions.select",

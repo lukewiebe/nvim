@@ -1,6 +1,9 @@
 -- https://github.com/savq/paq-nvim
 
-require("paq")({
+local loaded, paq = pcall(require, "paq")
+if not loaded then return end
+
+paq({
 	"https://github.com/savq/paq-nvim",
 
 	-- editor (sanity) modifications

@@ -1,5 +1,8 @@
 -- https://github.com/nvim-telescope/telescope.nvim
 
+local loaded, telescope = pcall(require, "telescope")
+if not loaded then return end
+
 -- file quick-switcher
 vim.keymap.set("n", "<space>sf", require("telescope.builtin").find_files, {})
 -- quicksearch inside files
