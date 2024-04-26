@@ -17,9 +17,7 @@ conform.setup({
 		c = { "astyle" },
 	},
 	format_on_save = function(buf)
-		if slow_filetypes[vim.bo[buf].filetype] then
-			return
-		end
+		if slow_filetypes[vim.bo[buf].filetype] then return end
 		local on_format = function(err)
 			if err and err:match("timeout$") then
 				slow_filetypes[vim.bo[buf].filetype] = true
@@ -28,9 +26,7 @@ conform.setup({
 		return { timeout_ms = 200, lsp_fallback = true }, on_format
 	end,
 	format_after_save = function(buf)
-		if not slow_filetypes[vim.bo[buf].filetype] then
-			return
-		end
+		if not slow_filetypes[vim.bo[buf].filetype] then return end
 		return { lsp_fallback = true }
 	end,
 })
