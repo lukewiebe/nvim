@@ -12,8 +12,6 @@ require("paq")({
 	"https://tpope.io/vim/fugitive.git", -- git client
 	"https://github.com/stevearc/oil.nvim", -- replace netrw with a better pane file explorer
 	"https://github.com/andymass/vim-matchup", -- better % jumps
-	"https://github.com/numToStr/Comment.nvim", -- gc operator for comments
-	"https://github.com/chrishrb/gx.nvim",
 
 	{ "https://github.com/spaceduck-theme/nvim", as = "spaceduck" }, -- my forever colorscheme
 
@@ -29,7 +27,6 @@ require("paq")({
 	"https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
 	"https://github.com/nvim-treesitter/nvim-treesitter-refactor",
 	"https://github.com/windwp/nvim-ts-autotag",
-	"https://github.com/JoosepAlviste/nvim-ts-context-commentstring",
 
 	-- IDE features
 	"https://github.com/neovim/nvim-lspconfig", -- sensible default LSP configs
