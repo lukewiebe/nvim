@@ -4,7 +4,7 @@ require("paq")({
 	"https://github.com/savq/paq-nvim",
 
 	-- editor (sanity) modifications
-	"https://github.com/windwp/nvim-autopairs", -- sensible bracket autoclose behaviour
+	"https://github.com/m4xshen/autoclose.nvim", -- sensible bracket autoclose
 	"https://tpope.io/vim/abolish.git", -- Subvert and siblings
 	"https://tpope.io/vim/sleuth.git", -- match editor settings to file
 	"https://tpope.io/vim/surround.git", -- needs no introduction
@@ -40,6 +40,6 @@ require("paq")({
 	"https://github.com/tpope/vim-rhubarb", -- github addition to fugitive
 	"https://github.com/dcampos/nvim-snippy", -- minimal snippet plugin
 	"https://github.com/NvChad/nvim-colorizer.lua", -- show tailwind colors inline
-	"https://github.com/folke/todo-comments.nvim",
-	"https://github.com/tommcdo/vim-exchange",
+	"https://github.com/folke/todo-comments.nvim", -- highlights comments like  TODO: test
+	"https://github.com/tommcdo/vim-exchange", -- cx operator for exchanging
 })
