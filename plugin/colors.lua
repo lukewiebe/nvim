@@ -10,3 +10,4 @@ update_hl("CursorLine", { bg = "none" })
 update_hl("CursorLineNr", { bg = "none" })
 
 -- italics on comments is not working
+-- update_hl("Comment", { italic = true })
