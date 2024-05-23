@@ -7,15 +7,17 @@ local slow_filetypes = {}
 
 require("conform").setup({
 	formatters_by_ft = {
-		javascript = { { "prettierd", "prettier" } },
+		javascript = { "prettier" },
+		markdown = { "prettier" },
+		html = { "prettier" },
 		java = { "google-java-format" },
 		lua = { "stylua" },
-		-- r = { "styler" },
 		c = { "astyle" },
 	},
 	format_on_save = function(buf)
 		if slow_filetypes[vim.bo[buf].filetype] then return end
 		local on_format = function(err)
+			-- stylua: ignore
 			if err and err:match("timeout$") then
 				slow_filetypes[vim.bo[buf].filetype] = true
 			end
