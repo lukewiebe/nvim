@@ -12,10 +12,6 @@ vim.keymap.set("n", "<leader>dd", function()
 	end
 end, { desc = "toggle all diagnostics" })
 
-vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end, { desc = "goto next diagnostic" })
-
-vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, { desc = "goto previous diagnostic" })
-
 vim.keymap.set(
 	"n",
 	"<leader>do",

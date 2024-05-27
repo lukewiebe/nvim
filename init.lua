@@ -37,5 +37,3 @@ require("cd")
 require("finder")
 require("formatoptions")
 require("resize_win")
-
--- trial
