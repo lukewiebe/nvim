@@ -1,5 +1,4 @@
 -- https://github.com/stevearc/oil.nvim
--- most settings copied from readme
 
 require("oil").setup({
 	keymaps = {
