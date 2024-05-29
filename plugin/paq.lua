@@ -44,4 +44,5 @@ require("paq")({
 	"https://github.com/tommcdo/vim-exchange",
 	"https://github.com/folke/ts-comments.nvim", -- improved commentstring for languages with multiple comment formats
 	"https://github.com/f-person/auto-dark-mode.nvim", -- auto light/dark mode
+	{ "https://github.com/glacambre/firenvim", build = ":call firenvim#install(0)" },
 })
