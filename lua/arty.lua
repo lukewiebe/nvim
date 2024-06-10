@@ -3,6 +3,14 @@
 -- working: write a buffer to Arty
 -- not working: get Arty to generate a chart
 
+-- to fix:
+-- httpgd won't display charts when running inside Arty
+
+-- to add:
+-- keybindings
+-- functions that can be called in any context
+-- export functions as a module
+
 local cmd = { "R", "--slave", "--no-save" }
 -- local cmd = { "cat" }
 
