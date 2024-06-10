@@ -18,7 +18,6 @@ vim.o.foldlevel = 99 -- don't fold by default
 vim.o.laststatus = 1 -- Remove the statusline if there's only one window
 vim.o.completeopt = "longest,menu"
 vim.o.autowrite = true
-vim.o.cursorline = true
 
 -- unmap space to use as an alternate leader
 vim.keymap.set("n", " ", "<Nop>", { silent = true })
@@ -30,6 +29,8 @@ vim.o.softtabstop = -1 -- when negative, value of tabstop is used
 vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
 
 -- My own lua modules
+require("colors")
+require("cursorline")
 require("lsp")
 require("quickfix")
 require("diagnostics")
@@ -38,3 +39,6 @@ require("finder")
 require("formatoptions")
 require("resize_win")
 require("open")
+
+-- trial
+vim.o.inccommand = "split"

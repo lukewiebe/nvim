@@ -1,6 +1,6 @@
 -- colors customization
 
-local remove_bg = function()
+local edit_colorscheme = function()
 	-- inspired by https://stackoverflow.com/questions/74677587/how-to-set-comments-to-italic-fonts-in-neovim
 	local update_hl = function(group_name, opts)
 		local hl_group = vim.api.nvim_get_hl(0, { name = group_name })
@@ -12,14 +12,14 @@ local remove_bg = function()
 	update_hl("Normal", { bg = "none" })
 	update_hl("EndOfBuffer", { bg = "none" })
 	update_hl("LineNr", { bg = "none" })
-	update_hl("CursorLine", { bg = "none" })
-	update_hl("CursorLineNr", { bg = "none" })
+	update_hl("CursorLine", { bg = "#1c1d23" })
+	update_hl("CursorLineNr", { bg = "#1c1d23" })
 end
 
 vim.api.nvim_create_autocmd("ColorScheme", {
 	group = vim.api.nvim_create_augroup("colors", { clear = true }),
 	pattern = "default",
-	callback = remove_bg,
+	callback = edit_colorscheme,
 })
 
 vim.cmd.colorscheme("default")
