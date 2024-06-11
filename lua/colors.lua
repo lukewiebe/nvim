@@ -1,19 +1,21 @@
 -- colors customization
 
 local edit_colorscheme = function()
-	-- inspired by https://stackoverflow.com/questions/74677587/how-to-set-comments-to-italic-fonts-in-neovim
-	local update_hl = function(group_name, opts)
-		local hl_group = vim.api.nvim_get_hl(0, { name = group_name })
-		hl_group = vim.tbl_extend("force", hl_group, opts)
-		vim.api.nvim_set_hl(0, group_name, hl_group)
-	end
+	local update_hl = require("update_hl")
 
 	-- remove background
 	update_hl("Normal", { bg = "none" })
 	update_hl("EndOfBuffer", { bg = "none" })
 	update_hl("LineNr", { bg = "none" })
-	update_hl("CursorLine", { bg = "#1c1d23" })
-	update_hl("CursorLineNr", { bg = "#1c1d23" })
+
+	-- change cursorline color depending on mode
+	if vim.o.background == "dark" then
+		update_hl("CursorLine", { bg = "#1c1d23" })
+		update_hl("CursorLineNr", { bg = "#1c1d23" })
+	else
+		update_hl("CursorLine", { bg = "#ebeef5" })
+		update_hl("CursorLineNr", { bg = "#ebeef5" })
+	end
 end
 
 vim.api.nvim_create_autocmd("ColorScheme", {
@@ -22,4 +24,4 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = edit_colorscheme,
 })
 
-vim.cmd.colorscheme("default")
+vim.cmd.colorscheme("default") -- this runs the autocmd created above
