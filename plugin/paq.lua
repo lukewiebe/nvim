@@ -43,4 +43,6 @@ require("paq")({
 	"https://github.com/folke/todo-comments.nvim",
 	"https://github.com/folke/ts-comments.nvim", -- improved commentstring for languages with multiple comment formats
 	"https://github.com/f-person/auto-dark-mode.nvim", -- auto light/dark mode
+	"https://github.com/williamboman/mason.nvim",
+	"https://github.com/williamboman/mason-lspconfig.nvim",
 })

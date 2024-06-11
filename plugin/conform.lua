@@ -12,7 +12,7 @@ require("conform").setup({
 		html = { "prettier" },
 		java = { "google-java-format" },
 		lua = { "stylua" },
-		c = { "astyle" },
+		c = { "clang-format" },
 	},
 	format_on_save = function(buf)
 		if slow_filetypes[vim.bo[buf].filetype] then return end
