@@ -1,7 +1,7 @@
 -- Global LSP Configuration --
 
 vim.api.nvim_create_autocmd("LspAttach", {
-	group = vim.api.nvim_create_augroup("lsp-keymaps", { clear = true }),
+	group = vim.api.nvim_create_augroup("LspKeymaps", { clear = true }),
 	callback = function(args)
 		-- enable LSP omnifunc
 		vim.bo[args.buf].omnifunc = "v:lua.vim.lsp.omnifunc"

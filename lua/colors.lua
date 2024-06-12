@@ -12,7 +12,7 @@ local edit_colorscheme = function()
 	if vim.o.background == "dark" then
 		update_hl("CursorLine", { bg = "#1c1d23" })
 		update_hl("CursorLineNr", { bg = "#1c1d23" })
-	else
+	else -- light
 		update_hl("CursorLine", { bg = "#ebeef5" })
 		update_hl("CursorLineNr", { bg = "#ebeef5" })
 	end
