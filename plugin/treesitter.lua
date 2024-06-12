@@ -20,8 +20,9 @@ require("nvim-treesitter.configs").setup({
 	-- Copied from https://github.com/andymass/vim-matchup#tree-sitter-integration
 	matchup = {
 		enable = true,
+		enable_quotes = true,
 		disable = {},
-		include_matched_words = true,
+		include_match_words = true,
 	},
 
 	-- Config for https://github.com/nvim-treesitter/nvim-treesitter-textobjects
