@@ -44,4 +44,4 @@ vim.keymap.set("n", "<space>sb", require("telescope.builtin").buffers, {})
 -- help search
 vim.keymap.set("n", "<space>sh", require("telescope.builtin").help_tags, {})
 -- resume serach
-vim.keymap.set("n", "<space>sr", require("telescope.builtin").resume, {})
+vim.keymap.set("n", "<space>sp", require("telescope.builtin").resume, {})
