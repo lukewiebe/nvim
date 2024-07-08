@@ -8,6 +8,8 @@ local edit_colorscheme = function()
 	update_hl("EndOfBuffer", { bg = "none" })
 	update_hl("LineNr", { bg = "none" })
 
+	update_hl("Comment", { italic = true })
+
 	-- change cursorline color depending on mode
 	if vim.o.background == "dark" then
 		update_hl("CursorLine", { bg = "#1c1d23" })
