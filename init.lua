@@ -34,11 +34,10 @@ require("cursorline")
 require("lsp")
 require("quickfix")
 require("diagnostics")
-require("cd")
-require("finder")
 require("formatoptions")
 require("resize_win")
 require("open")
+require("commands")
 
 -- trial
 vim.o.inccommand = "split"
