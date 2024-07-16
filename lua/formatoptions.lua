@@ -8,5 +8,3 @@ vim.api.nvim_create_autocmd("BufEnter", {
 		vim.cmd.set("formatoptions-=o") -- no comment on o and O
 	end,
 })
-
--- hello

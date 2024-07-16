@@ -18,6 +18,7 @@ vim.o.foldlevel = 99 -- don't fold by default
 vim.o.laststatus = 1 -- Remove the statusline if there's only one window
 vim.o.completeopt = "longest,menu"
 vim.o.autowrite = true
+vim.o.inccommand = "split"
 
 -- unmap space to use as an alternate leader
 vim.keymap.set("n", " ", "<Nop>", { silent = true })
@@ -34,10 +35,16 @@ require("cursorline")
 require("lsp")
 require("quickfix")
 require("diagnostics")
-require("formatoptions")
 require("resize_win")
 require("open")
 require("commands")
 
--- trial
-vim.o.inccommand = "split"
+-- autocmd to edit formatoptions to stop making new comments when I press "o" or "O"
+-- since this option is set in many filetype commands, an autocmd really is the cleanest way to do this
+vim.api.nvim_create_autocmd("BufEnter", {
+	group = vim.api.nvim_create_augroup("FormatOptions", {}),
+	pattern = "*",
+	callback = function()
+		vim.cmd.set("formatoptions-=o") -- no comment on o and O
+	end,
+})
