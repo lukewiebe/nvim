@@ -23,21 +23,11 @@ vim.o.inccommand = "split"
 -- unmap space to use as an alternate leader
 vim.keymap.set("n", " ", "<Nop>", { silent = true })
 
--- TABS --
+-- tabs
 -- overridden by vim-sleuth or language configs in some cases
 vim.o.tabstop = 2
 vim.o.softtabstop = -1 -- when negative, value of tabstop is used
 vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
-
--- My own lua modules
-require("colors")
-require("cursorline")
-require("lsp")
-require("quickfix")
-require("diagnostics")
-require("resize_win")
-require("open")
-require("commands")
 
 -- autocmd to edit formatoptions to stop making new comments when I press "o" or "O"
 -- since this option is set in many filetype commands, an autocmd really is the cleanest way to do this
@@ -48,3 +38,22 @@ vim.api.nvim_create_autocmd("BufEnter", {
 		vim.cmd.set("formatoptions-=o") -- no comment on o and O
 	end,
 })
+
+-- equalize window size when vim is resized
+vim.api.nvim_create_autocmd("VimResized", {
+	group = vim.api.nvim_create_augroup("Resize", { clear = true }),
+	callback = function() vim.cmd.wincmd("=") end,
+})
+
+-- bindings to move to next and previous quickfix entries
+-- stolen from https://github.com/tpope/vim-unimpaired
+vim.keymap.set("n", "]q", "<cmd>cnext<cr>", { silent = true })
+vim.keymap.set("n", "[q", "<cmd>cprevious<cr>", { silent = true })
+
+-- My own lua modules
+require("colors")
+require("cursorline")
+require("lsp")
+require("diagnostics")
+require("open")
+require("commands")
