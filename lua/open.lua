@@ -1,20 +1,21 @@
 -- Open.lua
 -- wrapper for system open command
---
 
--- allows for :Open .
--- specify app to open current folder with
--- :Open www . -> open -a WorldWideWeb .
--- could also be extended to handle other OS's where a different open command is used
--- option 1: :Open www -> open -a WorldWideWeb .
--- option 2: :Open www -> open ./www
+-- Accepts two arguments: application and file/folder
+-- if one argument is given, assumes file/folder
+
+-- TODO:
+-- allow use of a setup function or global table (vim.g.open) to override default config
 
 local config = {
+	---@type { [string]: string } short names for frequently used apps
 	abbreviations = {
 		["www"] = "WorldWideWeb",
-	}, -- short names for frequently used apps
-	default_action = "folder", -- valid options are "folder" or "file"
-	open_cmd = "open", -- replace with an equivalent command on non-macOS
+	},
+	---@type "folder" | "file" if no arguments are given, open file or folder
+	default_action = "folder",
+	---@type string the command used to power :Open
+	open_cmd = "open",
 }
 
 vim.api.nvim_create_user_command("Open", function(opts)
