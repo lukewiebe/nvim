@@ -1,5 +1,4 @@
 -- Diagnostic configuration
--- kept independent from LSP settings because LSP is not the only way to use diagnostics
 
 vim.diagnostic.enable(false) -- diagnostics are off by default
 
