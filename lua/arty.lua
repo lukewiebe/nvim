@@ -11,6 +11,11 @@
 -- functions that can be called in any context
 -- export functions as a module
 
+-- to run:
+-- source this file
+-- go to an R file (there's one in after/ftplugin/test.R)
+-- try out :ArtyStart, :ArtyWrite, and :ArtyRun
+
 local cmd = { "R", "--slave", "--no-save" }
 -- local cmd = { "cat" }
 

@@ -2,7 +2,7 @@ vim.o.cursorline = true
 
 -- turn cursorline off whenever the window doesn't have focus
 
-local group = vim.api.nvim_create_augroup("LukeCursorLine", { clear = true })
+local group = vim.api.nvim_create_augroup("CursorLine", { clear = true })
 
 -- when nvim loses focus to tmux or another OS window
 vim.api.nvim_create_autocmd("FocusLost", {
