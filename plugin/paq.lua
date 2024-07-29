@@ -38,6 +38,9 @@ require("paq")({
 	-- Language/project specific
 	"https://github.com/mfussenegger/nvim-jdtls", -- really good Java LSP integration
 
+	-- mine
+	"https://github.com/lukewiebe/kontroll.nvim",
+
 	-- trial
 	"https://github.com/NvChad/nvim-colorizer.lua", -- show tailwind colors inline
 	"https://github.com/folke/todo-comments.nvim",
