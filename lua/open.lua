@@ -7,24 +7,17 @@
 -- TODO:
 -- allow use of a setup function or global table (vim.g.open) to override default config
 
-local M = {}
-
 local config = {
 	---@type { [string]: string } short names for frequently used apps
 	abbreviations = {
 		["www"] = "WorldWideWeb",
+		["marked"] = "Marked 2",
 	},
 	---@type "folder" | "file" if no arguments are given, open file or folder
 	default_action = "folder",
 	---@type string the command used to power :Open
 	open_cmd = "open",
 }
-
--- stylua: ignore
--- from https://github.com/jmbuhr/otter.nvim/blob/main/lua/otter/init.lua
-M.setup = function(opts)
-	config = vim.tbl_deep_extend("force", config, opts or {})
-end
 
 vim.api.nvim_create_user_command("Open", function(opts)
 	local cmd = { config.open_cmd }
