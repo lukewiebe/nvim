@@ -57,3 +57,6 @@ require("lsp")
 require("diagnostics")
 require("open")
 require("commands")
+
+vim.o.statusline = "%!v:lua.require'statusline'()"
+-- vim.keymap.set("n", "<leader>r", function() package.loaded["statusline"] = nil end, {})
