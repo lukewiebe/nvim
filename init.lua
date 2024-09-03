@@ -12,7 +12,6 @@ vim.o.undofile = true
 vim.o.splitright = true -- new vertical splits show up on the right side
 vim.o.splitbelow = true -- new horizonal splits appear on the bottom
 vim.o.scrolloff = 5 -- keep the cursor off the top or bottom of the window
-vim.cmd.tnoremap("<Esc>", "<C-\\><C-n>") -- let esc exit insert mode in terminal buffer
 vim.o.foldmethod = "syntax" -- overridden by treesitter when applicable
 vim.o.foldlevel = 99 -- don't fold by default
 vim.o.laststatus = 1 -- Remove the statusline if there's only one window
@@ -20,8 +19,10 @@ vim.o.completeopt = "longest,menu"
 vim.o.autowrite = true
 vim.o.inccommand = "split"
 
+-- a few keymaps
 -- unmap space to use as an alternate leader
 vim.keymap.set("n", " ", "<Nop>", { silent = true })
+-- vim.keymap.set("t", "<esc>", "<c-\\><c-n>", {})
 
 -- tabs
 -- overridden by vim-sleuth or language configs in some cases
@@ -60,3 +61,5 @@ require("commands")
 
 vim.o.statusline = "%!v:lua.require'statusline'()"
 -- vim.keymap.set("n", "<leader>r", function() package.loaded["statusline"] = nil end, {})
+
+require("web") -- hack until I fix lsp
