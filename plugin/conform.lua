@@ -16,7 +16,9 @@ require("conform").setup({
 		java = { "google-java-format" },
 		lua = { "stylua" },
 		c = { "clang-format" },
+		fish = { "fish_indent" },
 	},
+
 	format_on_save = function(buf)
 		if slow_filetypes[vim.bo[buf].filetype] then return end
 		local on_format = function(err)
