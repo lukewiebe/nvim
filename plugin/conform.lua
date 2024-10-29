@@ -16,6 +16,9 @@ require("conform").setup({
 	},
 })
 
-vim.keymap.set("n", "<space>f", require("conform").format, {})
+vim.keymap.set("n", "<space>f", function()
+	require("conform").format()
+	vim.notify("formatted")
+end, {})
 
 vim.g.zig_fmt_autosave = 0 -- incredibly annoying default, can be removed in nvim >0.11
