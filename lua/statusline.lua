@@ -1,11 +1,48 @@
 -- https://zignar.net/2022/01/21/a-boring-statusline-for-neovim/
 -- :h statusline
 
-return function()
-	local parts = {
-		[[%{FugitiveStatusline()} ]],
-		[[%<%f %h%m%r%=]],
-		[[%-14.(%l,%c%V%) %P]],
-	}
-	return table.concat(parts, "")
+local M = {}
+
+M.fileformat = function()
+	local result = ""
+	if vim.o.fileformat ~= "unix" then
+		result = result .. string.format("[%s]", vim.o.fileformat)
+	end
+	return result
 end
+
+M.ruler = function()
+	local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+	col = col + 1 -- shift from 0-index to 1-index
+	result = string.format("%s,%s", row, col)
+
+	local visual_start = vim.fn.getcharpos('v')
+	local v_row = visual_start[2]
+	local v_col = visual_start[3]
+
+	if col ~= v_col then
+		local min = math.min(col, v_col)
+		local max = math.max(col, v_col)
+		result = string.format("%s,%s-%s (%s chars)", row, min, max, max - min + 1)
+	end
+
+	return result
+end
+
+M.git = function()
+	local head = vim.fn.FugitiveHead(7) -- hash truncated to 7 characters
+	return string.format("(%s)", head)
+end
+
+M.statusline = function()
+	local parts = {
+		[[%{luaeval("require('statusline').git()")}]],
+		[[%{luaeval("require('statusline').fileformat()")}]],
+		[[%<%f %m%r%=]], -- truncatable filename, [+] if modified, [RO] if read-only
+		[[%-14{luaeval("require('statusline').ruler()")} %P]],
+		-- [[%-14.(%l,%c%V%) %P]],
+	}
+	return table.concat(parts, " ")
+end
+
+return M
