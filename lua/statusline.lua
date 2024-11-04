@@ -4,21 +4,21 @@
 local M = {}
 
 M.fileformat = function()
-	local result = ""
 	if vim.o.fileformat ~= "unix" then
-		result = result .. string.format("[%s]", vim.o.fileformat)
+		return string.format("[%s]", vim.o.fileformat)
 	end
-	return result
+	return ""
 end
 
+-- my replacement for the builtin ruler
 M.ruler = function()
 	local row, col = unpack(vim.api.nvim_win_get_cursor(0))
 	col = col + 1 -- shift from 0-index to 1-index
 	result = string.format("%s,%s", row, col)
 
-	local visual_start = vim.fn.getcharpos('v')
-	local v_row = visual_start[2]
-	local v_col = visual_start[3]
+	local v_start = vim.fn.getcharpos("v")
+	local v_row = v_start[2]
+	local v_col = v_start[3]
 
 	if col ~= v_col then
 		local min = math.min(col, v_col)
@@ -29,6 +29,7 @@ M.ruler = function()
 	return result
 end
 
+-- see fugitive source (/plugin/fugitive.vim) for API documentation
 M.git = function()
 	local head = vim.fn.FugitiveHead(7) -- hash truncated to 7 characters
 	return string.format("(%s)", head)
@@ -40,7 +41,7 @@ M.statusline = function()
 		[[%{luaeval("require('statusline').fileformat()")}]],
 		[[%<%f %m%r%=]], -- truncatable filename, [+] if modified, [RO] if read-only
 		[[%-14{luaeval("require('statusline').ruler()")} %P]],
-		-- [[%-14.(%l,%c%V%) %P]],
+		-- [[%-14.(%l,%c%V%) %P]], -- default ruler
 	}
 	return table.concat(parts, " ")
 end
