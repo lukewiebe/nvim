@@ -13,13 +13,6 @@ end, { desc = "toggle all diagnostics" })
 
 vim.keymap.set(
 	"n",
-	"<leader>do",
-	function() vim.diagnostic.open_float() end,
-	{ desc = "open diagnostic under the cursor in a floating window" }
-)
-
-vim.keymap.set(
-	"n",
 	"<leader>dq",
 	function() vim.diagnostic.setqflist() end,
 	{ desc = "send diagnostics to quickfix list" }
