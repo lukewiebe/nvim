@@ -61,5 +61,3 @@ require("commands")
 
 -- vim.keymap.set("n", "<leader>r", function() package.loaded["statusline"] = nil end, {})
 vim.o.statusline = "%!v:lua.require'statusline'.statusline()"
-
-require("web") -- hack until I fix lsp
