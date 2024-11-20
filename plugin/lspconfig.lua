@@ -8,11 +8,11 @@ require("mason").setup()
 -- https://github.com/williamboman/mason-lspconfig.nvim
 require("mason-lspconfig").setup()
 
-require("lspconfig").ts_ls.setup()
-require("lspconfig").tailwindcss.setup()
-require("lspconfig").mdx_analyzer.setup()
-require("lspconfig").zls.setup()
-require("lspconfig").pyright.setup()
+require("lspconfig").ts_ls.setup({})
+require("lspconfig").tailwindcss.setup({})
+require("lspconfig").mdx_analyzer.setup({})
+require("lspconfig").zls.setup({})
+require("lspconfig").pyright.setup({})
 
 require("lspconfig").lua_ls.setup({
 	autostart = true,
