@@ -16,7 +16,8 @@ require("paq")({
 	"https://github.com/tommcdo/vim-exchange", -- cx operator
 	"https://github.com/stevearc/dressing.nvim", -- simple UI improvement
 
-	{ "https://github.com/spaceduck-theme/nvim", as = "spaceduck" }, -- my forever colorscheme
+	"https://github.com/f-person/auto-dark-mode.nvim", -- auto light/dark mode
+	"https://github.com/folke/todo-comments.nvim", -- pretty TODO: comments
 
 	-- telescope
 	"https://github.com/nvim-lua/plenary.nvim", -- required for telescope
@@ -42,10 +43,8 @@ require("paq")({
 	"https://github.com/lukewiebe/kontroll.nvim",
 
 	-- trial
-	"https://github.com/NvChad/nvim-colorizer.lua", -- show tailwind colors inline
-	"https://github.com/folke/todo-comments.nvim",
+	"https://github.com/NvChad/nvim-colorizer.lua", -- show colors in text
 	"https://github.com/folke/ts-comments.nvim", -- improved commentstring for languages with multiple comment formats
-	"https://github.com/f-person/auto-dark-mode.nvim", -- auto light/dark mode
 	"https://github.com/williamboman/mason.nvim",
 	"https://github.com/williamboman/mason-lspconfig.nvim",
 })
