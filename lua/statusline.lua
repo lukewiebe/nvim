@@ -4,10 +4,11 @@
 local M = {}
 
 M.fileformat = function()
+	local result = "[" .. vim.o.filetype .. "]"
 	if vim.o.fileformat ~= "unix" then
-		return string.format("[%s]", vim.o.fileformat)
+		result = result .. string.format(" !%s!", vim.o.fileformat)
 	end
-	return ""
+	return result
 end
 
 -- my replacement for the builtin ruler
@@ -20,6 +21,7 @@ M.ruler = function()
 	local v_row = v_start[2]
 	local v_col = v_start[3]
 
+	-- show range for visual selection
 	if col ~= v_col then
 		local min = math.min(col, v_col)
 		local max = math.max(col, v_col)
