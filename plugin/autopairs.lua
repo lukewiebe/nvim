@@ -1,14 +1,18 @@
-require("nvim-autopairs").setup({})
+-- https://github.com/windwp/nvim-autopairs
 
--- from https://github.com/windwp/nvim-autopairs
-local Rule = require("nvim-autopairs.rule")
 local npairs = require("nvim-autopairs")
+
+npairs.setup({
+	map_c_w = false,
+})
+
+local Rule = require("nvim-autopairs.rule")
 local cond = require("nvim-autopairs.conds")
 
 -- from https://github.com/windwp/nvim-autopairs/wiki/Rules-API
+-- npairs.add_rule(Rule("<", ">", "html"):with_move(cond.done()))
 -- the :with_move() addition allows 'type over' behaviour
 -- cond.done() always returns true, but we can specify conditions
--- npairs.add_rule(Rule("<", ">", "html"):with_move(cond.done()))
 -- this rule is obviated by nvim-ts-autotag, but kept for reference
 
 -- the following replicates the spaces-between-brackets behaviour I like so much.
