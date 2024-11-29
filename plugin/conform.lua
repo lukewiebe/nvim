@@ -16,9 +16,18 @@ require("conform").setup({
 	},
 })
 
+vim.g.zig_fmt_autosave = 0 -- incredibly annoying default, can be removed in nvim >0.11
+
 vim.keymap.set("n", "<space>f", function()
-	require("conform").format()
+	local conform = require("conform")
+	local run_async = {
+		"zig",
+		"java",
+	}
+	if vim.tbl_contains(run_async, vim.bo.filetype) then
+		conform.format({ async = true })
+	else
+		conform.format()
+	end
 	vim.notify("formatted")
 end, {})
-
-vim.g.zig_fmt_autosave = 0 -- incredibly annoying default, can be removed in nvim >0.11
