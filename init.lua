@@ -19,6 +19,9 @@ vim.o.completeopt = "longest,menu"
 vim.o.autowrite = true
 vim.o.inccommand = "split"
 
+-- gui settings
+vim.o.guifont = "Input Mono Narrow:h14"
+
 -- a few keymaps
 -- unmap space to use as an alternate leader
 vim.keymap.set("n", " ", "<Nop>", { silent = true })
