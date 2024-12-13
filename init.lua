@@ -25,7 +25,6 @@ vim.o.guifont = "Input Mono Narrow:h14"
 -- a few keymaps
 -- unmap space to use as an alternate leader
 vim.keymap.set("n", " ", "<Nop>", { silent = true })
--- vim.keymap.set("t", "<esc>", "<c-\\><c-n>", {})
 
 -- remap _ to do linewise up/down navigation
 vim.keymap.set("n", "_", "-", {})
