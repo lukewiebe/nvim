@@ -1,4 +1,4 @@
--- modified recommended settings from https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
+-- modified recommended settings from https://github.com/neovim/nvim-lspconfig
 
 vim.lsp.start({
 	name = "lua_ls",
