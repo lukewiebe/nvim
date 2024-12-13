@@ -27,6 +27,9 @@ vim.o.guifont = "Input Mono Narrow:h14"
 vim.keymap.set("n", " ", "<Nop>", { silent = true })
 -- vim.keymap.set("t", "<esc>", "<c-\\><c-n>", {})
 
+-- remap _ to do linewise up/down navigation
+vim.keymap.set("n", "_", "-", {})
+
 -- tabs
 -- overridden by vim-sleuth or language configs in some cases
 vim.o.tabstop = 2
