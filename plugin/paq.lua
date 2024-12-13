@@ -32,7 +32,6 @@ require("paq")({
 	"https://github.com/windwp/nvim-ts-autotag",
 
 	-- IDE features
-	"https://github.com/neovim/nvim-lspconfig", -- sensible default LSP configs
 	"https://github.com/stevearc/conform.nvim", -- formatter
 	"https://github.com/dcampos/nvim-snippy", -- minimal snippet plugin
 
@@ -46,5 +45,4 @@ require("paq")({
 	"https://github.com/NvChad/nvim-colorizer.lua", -- show colors in text
 	"https://github.com/folke/ts-comments.nvim", -- improved commentstring for languages with multiple comment formats
 	"https://github.com/williamboman/mason.nvim",
-	"https://github.com/williamboman/mason-lspconfig.nvim",
 })
