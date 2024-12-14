@@ -3,12 +3,22 @@
 
 local M = {}
 
+M.statusline = function()
+	local parts = {
+		[[%{luaeval("require('statusline').git()")} ]],
+		[[%{luaeval("require('statusline').fileformat()")}]],
+		[[%<%f %m%r%=]], -- truncatable filename, [+] if modified, [RO] if read-only
+		[[%-14{luaeval("require('statusline').ruler()")} %P]],
+		-- [[%-14.(%l,%c%V%) %P]], -- default ruler
+	}
+	return table.concat(parts, "")
+end
+
 M.fileformat = function()
-	local result = "[" .. vim.o.filetype .. "]"
 	if vim.o.fileformat ~= "unix" then
-		result = result .. string.format(" !%s!", vim.o.fileformat)
+		return string.format("!%s! ", vim.o.fileformat)
 	end
-	return result
+	return ""
 end
 
 -- my replacement for the builtin ruler
@@ -34,18 +44,8 @@ end
 -- see fugitive source (/plugin/fugitive.vim) for API documentation
 M.git = function()
 	local head = vim.fn.FugitiveHead(7) -- hash truncated to 7 characters
+	if head == "" then return "" end
 	return string.format("(%s)", head)
-end
-
-M.statusline = function()
-	local parts = {
-		[[%{luaeval("require('statusline').git()")}]],
-		[[%{luaeval("require('statusline').fileformat()")}]],
-		[[%<%f %m%r%=]], -- truncatable filename, [+] if modified, [RO] if read-only
-		[[%-14{luaeval("require('statusline').ruler()")} %P]],
-		-- [[%-14.(%l,%c%V%) %P]], -- default ruler
-	}
-	return table.concat(parts, " ")
 end
 
 return M
