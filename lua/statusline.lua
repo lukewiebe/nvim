@@ -25,19 +25,32 @@ end
 M.ruler = function()
 	local row, col = unpack(vim.api.nvim_win_get_cursor(0))
 	col = col + 1 -- shift from 0-index to 1-index
-	result = string.format("%s,%s", row, col)
+	local result = string.format("%s,%s", row, col)
 
 	local v_start = vim.fn.getcharpos("v")
 	local v_row = v_start[2]
 	local v_col = v_start[3]
+	local sel_width = math.abs(col - v_col) + 1
+	local sel_height = math.abs(row - v_row) + 1
 
-	-- show range for visual selection
-	if col ~= v_col then
+	local mode = vim.api.nvim_get_mode()["mode"]
+
+	-- intelligently display visual selection metrics
+	if mode == "V" then
+		if sel_height == 1 then
+			result = "1 line"
+		else
+			result = string.format("%s lines", sel_height)
+		end
+	elseif mode == "" then
+		result = string.format("%s×%s", sel_width, sel_height)
+	elseif row == v_row and col ~= v_col then
 		local min = math.min(col, v_col)
 		local max = math.max(col, v_col)
-		result = string.format("%s,%s-%s (%s chars)", row, min, max, max - min + 1)
+		result = string.format("%s,%s-%s (%sc)", row, min, max, sel_width)
 	end
 
+	-- result = string.format("row: %s, col: %s, v_row: %s, v_col: %s", row, col, v_row, v_col) -- debug
 	return result
 end
 
