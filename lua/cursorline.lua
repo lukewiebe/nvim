@@ -4,22 +4,18 @@ vim.o.cursorline = true
 
 local group = vim.api.nvim_create_augroup("CursorLine", { clear = true })
 
--- when nvim loses focus to tmux or another OS window
-vim.api.nvim_create_autocmd("FocusLost", {
-	group = group,
-	command = "silent set nocursorline",
-})
-vim.api.nvim_create_autocmd("FocusGained", {
+vim.api.nvim_create_autocmd({ "WinEnter", "FocusGained" }, {
 	group = group,
 	command = "silent set cursorline",
 })
 
--- when I switch panes in nvim
-vim.api.nvim_create_autocmd("WinEnter", {
+vim.api.nvim_create_autocmd({ "FocusLost", "WinLeave" }, {
 	group = group,
-	command = "silent set cursorline",
+	command = "silent set nocursorline",
 })
-vim.api.nvim_create_autocmd("WinLeave", {
+
+vim.api.nvim_create_autocmd("BufEnter", {
 	group = group,
+	pattern = "TelescopePrompt",
 	command = "silent set nocursorline",
 })
