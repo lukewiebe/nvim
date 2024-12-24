@@ -1,11 +1,8 @@
--- Tree-Sitter Configuration --
+-- https://github.com/nvim-treesitter/nvim-treesitter
 
 -- Set those options
 vim.o.foldmethod = "expr" -- overrides 'syntax' in init.lua
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
-
--- Borrowed formatting from:
--- https://github.com/nvim-treesitter/nvim-treesitter
 
 require("nvim-treesitter.configs").setup({
 	auto_install = true,
@@ -17,7 +14,7 @@ require("nvim-treesitter.configs").setup({
 		enable = true,
 	},
 
-	-- Copied from https://github.com/andymass/vim-matchup#tree-sitter-integration
+	-- from https://github.com/andymass/vim-matchup#tree-sitter-integration
 	matchup = {
 		enable = true,
 		enable_quotes = true,
@@ -25,7 +22,7 @@ require("nvim-treesitter.configs").setup({
 		include_match_words = true,
 	},
 
-	-- Config for https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+	-- config for https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 	textobjects = {
 		-- Copied selectively from https://github.com/nvim-treesitter/nvim-treesitter-textobjects#text-objects-select
 		select = {
