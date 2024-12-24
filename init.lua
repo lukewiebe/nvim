@@ -57,6 +57,7 @@ vim.keymap.set("n", "]q", "<cmd>cnext<cr>", { silent = true })
 vim.keymap.set("n", "[q", "<cmd>cprevious<cr>", { silent = true })
 
 -- My own lua modules
+require("mini-deps")
 require("colors")
 require("cursorline")
 require("lsp")
