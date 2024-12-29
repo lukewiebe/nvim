@@ -27,20 +27,21 @@ add({
 })
 
 add({
-	source = "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
-	hooks = {
-		post_checkout = function(args)
-			-- make in the correct directory
-			vim.system({ "make" }, { cwd = args.path }):wait()
-		end,
-	},
-})
-
-add({
 	source = "https://github.com/nvim-telescope/telescope.nvim",
 	checkout = "0.1.x",
 	depends = {
 		"https://github.com/nvim-lua/plenary.nvim",
+		{
+			source = "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
+			hooks = {
+				post_install = function(args)
+					vim.system({ "make" }, { cwd = args.path, text = true }):wait()
+				end,
+				post_checkout = function(args)
+					vim.system({ "make" }, { cwd = args.path, text = true }):wait()
+				end,
+			},
+		},
 	},
 })
 
