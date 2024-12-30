@@ -34,12 +34,8 @@ add({
 		{
 			source = "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
 			hooks = {
-				post_install = function(args)
-					vim.system({ "make" }, { cwd = args.path, text = true }):wait()
-				end,
-				post_checkout = function(args)
-					vim.system({ "make" }, { cwd = args.path, text = true }):wait()
-				end,
+				post_install = function(args) vim.system({ "make" }, { cwd = args.path }):wait() end,
+				post_checkout = function(args) vim.system({ "make" }, { cwd = args.path }):wait() end,
 			},
 		},
 	},
