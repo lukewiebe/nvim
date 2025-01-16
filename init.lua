@@ -19,6 +19,10 @@ vim.o.completeopt = "longest,menu"
 vim.o.autowrite = true
 vim.o.inccommand = "split"
 
+if vim.fn.executable("fish") == 1 then
+	vim.o.shell = "fish"
+end
+
 -- gui settings
 vim.o.guifont = "Input Mono Narrow:h14"
 
