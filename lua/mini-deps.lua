@@ -74,7 +74,6 @@ add("https://github.com/mfussenegger/nvim-jdtls") -- really good Java LSP integr
 -- trial
 add("https://github.com/NvChad/nvim-colorizer.lua") -- show colors in text
 add("https://github.com/folke/ts-comments.nvim") -- improved commentstring for languages with multiple comment formats
-add("https://github.com/williamboman/mason.nvim")
 
 -- mine
 add("https://github.com/lukewiebe/kontroll.nvim")

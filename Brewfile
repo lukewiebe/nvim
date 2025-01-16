@@ -1,0 +1,10 @@
+brew "pyright"
+brew "llvm" # clangd is in this package
+brew "google-java-format"
+brew "jdtls"
+brew "lua-language-server"
+brew "prettier"
+brew "stylua"
+brew "tailwindcss-language-server"
+brew "typescript-language-server"
+brew "zls"
