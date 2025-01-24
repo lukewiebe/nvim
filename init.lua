@@ -18,6 +18,7 @@ vim.o.laststatus = 1 -- Remove the statusline if there's only one window
 vim.o.completeopt = "longest,menu"
 vim.o.autowrite = true
 vim.o.inccommand = "split"
+vim.o.makeprg = "make -j8"
 
 if vim.fn.executable("fish") == 1 then
 	vim.o.shell = "fish"
