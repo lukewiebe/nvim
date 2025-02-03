@@ -13,6 +13,7 @@ require("conform").setup({
 		c = { "clang-format" },
 		fish = { "fish_indent" },
 		zig = { "zigfmt" },
+		cpp = { "clang-format" },
 	},
 })
 

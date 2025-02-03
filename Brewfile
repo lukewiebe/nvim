@@ -1,5 +1,6 @@
 brew "pyright"
 brew "llvm" # clangd is in this package
+brew "clang-format"
 brew "google-java-format"
 brew "jdtls"
 brew "lua-language-server"
