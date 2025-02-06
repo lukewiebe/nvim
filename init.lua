@@ -20,6 +20,12 @@ vim.o.autowrite = true
 vim.o.inccommand = "split"
 vim.o.makeprg = "make -j8"
 
+-- tabs
+-- overridden by vim-sleuth or language configs in some cases
+vim.o.tabstop = 2
+vim.o.softtabstop = -1 -- when negative, value of tabstop is used
+vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
+
 if vim.fn.executable("fish") == 1 then
 	vim.o.shell = "fish"
 end
@@ -33,12 +39,6 @@ vim.keymap.set("n", " ", "<Nop>", { silent = true })
 
 -- remap _ to do linewise up/down navigation
 vim.keymap.set("n", "_", "-", {})
-
--- tabs
--- overridden by vim-sleuth or language configs in some cases
-vim.o.tabstop = 2
-vim.o.softtabstop = -1 -- when negative, value of tabstop is used
-vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
 
 -- autocmd to edit formatoptions to stop making new comments when I press "o" or "O"
 -- since this option is set in many filetype commands, an autocmd really is the cleanest way to do this
