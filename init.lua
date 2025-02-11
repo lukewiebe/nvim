@@ -71,3 +71,6 @@ require("commands")
 
 -- vim.keymap.set("n", "<leader>r", function() package.loaded["statusline"] = nil end, {})
 vim.o.statusline = "%!v:lua.require'statusline'.statusline()"
+
+-- experimental
+vim.keymap.set("n", "<leader>cc", "<cmd>source ~/.config/nvim/lua/blink.lua<cr>", {})
