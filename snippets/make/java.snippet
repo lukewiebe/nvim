@@ -1,5 +1,6 @@
-SOURCES = $(wildcard *.java)
-CLASSES = $(SOURCES:.java=.class)
+SOURCES := $(wildcard *.java)
+CLASSES := $(SOURCES:.java=.class)
+
 .PHONY: all clean
 
 all: build run

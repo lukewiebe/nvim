@@ -1,0 +1,24 @@
+SOURCES := $(wildcard *.cpp)
+OBJECTS := $(SOURCES:.cpp=.o)
+DEPFILES := $(SOURCES:.cpp=.d)
+EXECUTABLE := main
+CXX := clang++
+CXXFLAGS := -Wpedantic -std=c++${0:11} -MMD
+
+.PHONY: all clean run build
+
+run: build
+	./$(EXECUTABLE)
+
+build: $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+-include $(DEPFILES)
+
+clean:
+	rm -f $(OBJECTS) $(EXECUTABLE) $(DEPFILES)
