@@ -11,3 +11,5 @@ if vim.fn.glob("Makefile") ~= "Makefile" then
 end
 
 vim.o.commentstring = "// %s"
+
+vim.o.tabstop = 2

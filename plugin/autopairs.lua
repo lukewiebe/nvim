@@ -2,7 +2,10 @@
 
 local npairs = require("nvim-autopairs")
 
-npairs.setup({})
+npairs.setup({
+	map_cr = true,
+	map_c_w = true,
+})
 
 local Rule = require("nvim-autopairs.rule")
 local cond = require("nvim-autopairs.conds")

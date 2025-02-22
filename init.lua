@@ -19,11 +19,8 @@ vim.o.completeopt = "longest,menu"
 vim.o.autowrite = true
 vim.o.inccommand = "split"
 vim.o.makeprg = "make -j8"
-
--- tabs
--- overridden by vim-sleuth or language configs in some cases
+vim.o.expandtab = true
 vim.o.tabstop = 2
--- vim.o.shiftwidth = 0 -- when zero, value of tabstop is used
 
 if vim.fn.executable("fish") == 1 then
 	vim.o.shell = "fish"
