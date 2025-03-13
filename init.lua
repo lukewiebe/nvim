@@ -21,6 +21,7 @@ vim.o.inccommand = "split"
 vim.o.makeprg = "make -j8"
 vim.o.expandtab = true
 vim.o.tabstop = 2
+vim.o.shiftwidth = 0
 
 if vim.fn.executable("fish") == 1 then
 	vim.o.shell = "fish"
