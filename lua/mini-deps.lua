@@ -50,7 +50,7 @@ add("https://github.com/nvim-treesitter/nvim-treesitter-textobjects")
 add("https://github.com/nvim-treesitter/nvim-treesitter-refactor")
 add("https://github.com/windwp/nvim-ts-autotag")
 
-add("https://github.com/windwp/nvim-autopairs") -- sensible bracket autoclose behaviour
+add("https://github.com/m4xshen/autoclose.nvim") -- sensible bracket autoclose behaviour
 add("https://tpope.io/vim/abolish.git") -- Subvert and siblings
 add("https://tpope.io/vim/sleuth.git") -- match editor settings to file
 add("https://tpope.io/vim/surround.git") -- needs no introduction
