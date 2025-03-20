@@ -1,3 +1,8 @@
+# global config dependencies
+brew "dark-mode"
+brew "git"
+
+# language-specific
 brew "pyright"
 brew "llvm" # clangd is in this package
 brew "clang-format"
@@ -9,4 +14,3 @@ brew "stylua"
 brew "tailwindcss-language-server"
 brew "typescript-language-server"
 brew "zls"
-brew "dark-mode"
