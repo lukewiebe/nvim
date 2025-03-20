@@ -53,6 +53,11 @@ vim.api.nvim_create_autocmd("VimResized", {
 	callback = function() vim.cmd.wincmd("=") end,
 })
 
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("HighlightYank", { clear = true }),
+	command = "silent! | lua vim.highlight.on_yank()", -- jank but using a function fails
+})
+
 -- bindings to move to next and previous quickfix entries
 -- stolen from https://github.com/tpope/vim-unimpaired
 vim.keymap.set("n", "]q", "<cmd>cnext<cr>", { silent = true })
