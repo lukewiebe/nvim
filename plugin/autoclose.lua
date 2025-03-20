@@ -2,7 +2,7 @@
 
 require("autoclose").setup({
 	keys = {
-		[">"] = { escape = false, close = true, pair = "><" }, -- autoindent html tags
+		[">"] = { escape = false, close = false, pair = "><" }, -- autoindent html tags
 	},
 
 	options = {
