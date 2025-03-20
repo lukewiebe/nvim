@@ -1,4 +1,4 @@
--- SETTINGS
+-- settings
 
 vim.o.smarttab = true
 vim.o.hlsearch = true
@@ -34,7 +34,7 @@ vim.o.guifont = "Input Mono Narrow:h14"
 -- unmap space to use as an alternate leader
 vim.keymap.set("n", " ", "<Nop>", { silent = true })
 
--- remap _ to do linewise up/down navigation
+-- remap _ to do linewise up/down navigation, since - is taken by Oil
 vim.keymap.set("n", "_", "-", {})
 
 -- autocmd to edit formatoptions to stop making new comments when I press "o" or "O"

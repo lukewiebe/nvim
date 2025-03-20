@@ -8,4 +8,5 @@ vim.lsp.start({
 	cmd = { "typescript-language-server", "--stdio" },
 	root_dir = vim.env.PWD,
 	single_file_support = true,
+	init_options = { hostInfo = 'neovim' },
 })

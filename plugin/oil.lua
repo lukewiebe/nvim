@@ -2,12 +2,12 @@
 
 require("oil").setup({
 	keymaps = {
-		["<C-x>"] = "actions.select_split",
+		["<C-x>"] = { "actions.select", opts = { horizontal = true } },
 		["y."] = "actions.copy_entry_path",
 	},
 	view_options = {
 		show_hidden = true,
-		is_always_hidden = function(name, bufnr)
+		is_always_hidden = function(name)
 			-- if this function returns true for a filename, hide that item
 			local ignore = {
 				".DS_Store",
