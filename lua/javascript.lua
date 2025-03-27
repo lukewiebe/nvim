@@ -10,3 +10,5 @@ vim.lsp.start({
 	single_file_support = true,
 	init_options = { hostInfo = 'neovim' },
 })
+
+vim.keymap.set("n", "<leader>r", "<cmd>w<cr>:!bun %<cr>", {})
