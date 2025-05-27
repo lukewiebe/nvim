@@ -19,8 +19,6 @@ conform.setup({
 	},
 })
 
-vim.g.zig_fmt_autosave = 0 -- incredibly annoying default, can be removed in nvim >=0.11
-
 vim.keymap.set("n", "<space>f", function()
 	local run_async = {
 		"zig",
