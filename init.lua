@@ -53,11 +53,6 @@ vim.api.nvim_create_autocmd("VimResized", {
 	callback = function() vim.cmd.wincmd("=") end,
 })
 
--- bindings to move to next and previous quickfix entries
--- stolen from https://github.com/tpope/vim-unimpaired
-vim.keymap.set("n", "]q", "<cmd>cnext<cr>", { silent = true })
-vim.keymap.set("n", "[q", "<cmd>cprevious<cr>", { silent = true })
-
 -- My own lua modules
 require("mini-deps")
 require("colors")

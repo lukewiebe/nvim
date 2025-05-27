@@ -1,6 +1,6 @@
 -- Diagnostic configuration
 
-vim.diagnostic.enable(false) -- diagnostics are off by default
+vim.diagnostic.enable(false) -- diagnostics off by default
 
 vim.keymap.set("n", "<leader>dd", function()
 	vim.diagnostic.enable(not vim.diagnostic.is_enabled())
@@ -17,3 +17,10 @@ vim.keymap.set(
 	function() vim.diagnostic.setqflist() end,
 	{ desc = "send diagnostics to quickfix list" }
 )
+
+-- enable virtual text
+vim.diagnostic.config({
+	virtual_lines = {
+		current_line = true, -- only show on current line
+	},
+})
