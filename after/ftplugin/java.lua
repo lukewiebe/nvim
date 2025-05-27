@@ -9,6 +9,7 @@ require("jdtls").start_or_attach({
 
 -- single-file compile and run for small programs
 -- set makeprg only if no Makefile is present
-if vim.fn.glob("Makefile") ~= "Makefile" then
-	vim.bo.makeprg = "java %"
-end
+-- if vim.fn.glob("Makefile") ~= "Makefile" then
+-- 	vim.bo.makeprg = "java %"
+-- end
+vim.bo.makeprg = "gradle"
