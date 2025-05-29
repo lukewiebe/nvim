@@ -8,7 +8,7 @@ vim.lsp.start({
 	cmd = { "typescript-language-server", "--stdio" },
 	root_dir = vim.env.PWD,
 	single_file_support = true,
-	init_options = { hostInfo = 'neovim' },
+	init_options = { hostInfo = "neovim" },
 })
 
-vim.keymap.set("n", "<leader>r", "<cmd>w<cr>:!bun %<cr>", {})
+vim.keymap.set("n", "<leader>r", "<cmd>w<cr>:!bun '%'<cr>", {})
