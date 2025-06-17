@@ -72,7 +72,7 @@ add("https://github.com/mfussenegger/nvim-jdtls") -- Java LSP integration
 
 -- trial
 add("https://github.com/NvChad/nvim-colorizer.lua") -- show colors like #FF00FF in text
-add("https://github.com/folke/ts-comments.nvim") -- improved commentstring for languages with multiple comment formats
+add("https://github.com/sindrets/diffview.nvim") -- git diffs
 
 -- mine
 add("https://github.com/lukewiebe/kontroll.nvim")
