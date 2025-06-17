@@ -54,7 +54,7 @@ vim.api.nvim_create_autocmd("VimResized", {
 })
 
 -- My own lua modules
-require("mini-deps")
+require("mini-deps") -- first so that packages get loaded early
 require("colors")
 require("cursorline")
 require("lsp")

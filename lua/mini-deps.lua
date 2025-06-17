@@ -62,17 +62,16 @@ add("https://github.com/andymass/vim-matchup") -- better % jumps
 add("https://github.com/tommcdo/vim-exchange") -- cx operator
 add("https://github.com/stevearc/dressing.nvim") -- simple UI improvement
 
-add("https://github.com/f-person/auto-dark-mode.nvim") -- auto light/dark mode
 add("https://github.com/folke/todo-comments.nvim") -- pretty TODO: comments
 
 add("https://github.com/stevearc/conform.nvim") -- formatter
 add("https://github.com/dcampos/nvim-snippy") -- minimal snippet plugin
 
 -- Language/project specific
-add("https://github.com/mfussenegger/nvim-jdtls") -- really good Java LSP integration
+add("https://github.com/mfussenegger/nvim-jdtls") -- Java LSP integration
 
 -- trial
-add("https://github.com/NvChad/nvim-colorizer.lua") -- show colors in text
+add("https://github.com/NvChad/nvim-colorizer.lua") -- show colors like #FF00FF in text
 add("https://github.com/folke/ts-comments.nvim") -- improved commentstring for languages with multiple comment formats
 
 -- mine
