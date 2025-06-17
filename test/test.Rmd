@@ -1,0 +1,7 @@
+# Hello world
+
+```r
+x = rnorm(1000)
+
+x[x < -1]
+```
