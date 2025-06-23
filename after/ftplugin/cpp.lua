@@ -1,9 +1,3 @@
-vim.lsp.start({
-	name = "clangd",
-	cmd = { "clangd" },
-	root_dir = vim.env.PWD,
-})
-
 -- single-file compile and run for small exercises
 -- set makeprg only if no Makefile is present
 if vim.fn.glob("Makefile") ~= "Makefile" then
