@@ -2,14 +2,16 @@
 
 -- configure nvim-jdtls
 -- https://github.com/mfussenegger/nvim-jdtls
-require("jdtls").start_or_attach({
+local config = {
 	cmd = { "jdtls" },
-	root_dir = vim.fn.getcwd(),
-})
+	root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[1]),
+}
+require("jdtls").start_or_attach(config)
 
 -- single-file compile and run for small programs
--- set makeprg only if no Makefile is present
--- if vim.fn.glob("Makefile") ~= "Makefile" then
--- 	vim.bo.makeprg = "java %"
--- end
-vim.bo.makeprg = "gradle"
+-- set makeprg only if no Makefile or gradlew is present
+if vim.fn.glob("gradlew") == "gradlew" then
+	vim.bo.makeprg = "gradle"
+elseif vim.fn.glob("Makefile") ~= "Makefile" then
+	vim.bo.makeprg = "java %"
+end
