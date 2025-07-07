@@ -25,7 +25,7 @@ vim.o.shiftwidth = 0
 vim.o.signcolumn = "number"
 
 if vim.fn.executable("fish") == 1 then
-	vim.o.shell = "fish"
+  vim.o.shell = "fish"
 end
 
 -- gui settings
@@ -41,17 +41,17 @@ vim.keymap.set("n", "_", "-", {})
 -- autocmd to edit formatoptions to stop making new comments when I press "o" or "O"
 -- since this option is set in many filetype commands, an autocmd really is the cleanest way to do this
 vim.api.nvim_create_autocmd("BufEnter", {
-	group = vim.api.nvim_create_augroup("FormatOptions", {}),
-	pattern = "*",
-	callback = function()
-		vim.cmd.set("formatoptions-=o") -- no comment on o and O
-	end,
+  group = vim.api.nvim_create_augroup("FormatOptions", {}),
+  pattern = "*",
+  callback = function()
+    vim.cmd.set("formatoptions-=o") -- no comment on o and O
+  end,
 })
 
 -- equalize window size when vim is resized
 vim.api.nvim_create_autocmd("VimResized", {
-	group = vim.api.nvim_create_augroup("Resize", { clear = true }),
-	callback = function() vim.cmd.wincmd("=") end,
+  group = vim.api.nvim_create_augroup("Resize", { clear = true }),
+  callback = function() vim.cmd.wincmd("=") end,
 })
 
 -- My own lua modules

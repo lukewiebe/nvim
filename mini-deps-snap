@@ -27,5 +27,5 @@ return {
   ["ts-comments.nvim"] = "1bd9d0ba1d8b336c3db50692ffd0955fe1bb9f0c",
   ["vim-exchange"] = "d6c1e9790bcb8df27c483a37167459bbebe0112e",
   ["vim-matchup"] = "ea2ff43e09e68b63fc6d9268fc5d82d82d433cb3",
-  ["vim-rhubarb"] = "386daa2e9d98e23e27ad089afcbe5c5a903e488d"
+  ["vim-rhubarb"] = "386daa2e9d98e23e27ad089afcbe5c5a903e488d",
 }

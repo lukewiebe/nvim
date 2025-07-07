@@ -8,10 +8,8 @@ local query = vim.treesitter.query.parse(vim.bo.filetype, [[ (method_declaration
 
 local count = 0
 for _, _ in query:iter_captures(root, vim.api.nvim_get_current_buf(), 0, -1) do
-	count = count + 1
+  count = count + 1
 end
 
 -- print("number of methods in " .. vim.fn.expand("%:t") .. ": " .. count .. "\n")
-if count > 0 then
-	print(count .. "\n")
-end
+if count > 0 then print(count .. "\n") end

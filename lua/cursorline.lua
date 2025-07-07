@@ -5,17 +5,17 @@ vim.o.cursorline = true
 local group = vim.api.nvim_create_augroup("CursorLine", { clear = true })
 
 vim.api.nvim_create_autocmd({ "WinEnter", "FocusGained" }, {
-	group = group,
-	command = "silent set cursorline",
+  group = group,
+  command = "silent set cursorline",
 })
 
 vim.api.nvim_create_autocmd({ "FocusLost", "WinLeave" }, {
-	group = group,
-	command = "silent set nocursorline",
+  group = group,
+  command = "silent set nocursorline",
 })
 
 vim.api.nvim_create_autocmd("BufEnter", {
-	group = group,
-	pattern = "TelescopePrompt",
-	command = "silent set nocursorline",
+  group = group,
+  pattern = "TelescopePrompt",
+  command = "silent set nocursorline",
 })
