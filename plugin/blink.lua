@@ -8,12 +8,6 @@ require("blink.cmp").setup({
     ["<c-l>"] = { "show_signature", "hide_signature", "fallback" },
   },
 
-  completion = {
-    menu = {
-      auto_show = function() return vim.g.autocomplete end,
-    },
-  },
-
   signature = {
     enabled = true,
   },
