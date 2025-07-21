@@ -6,6 +6,7 @@ require("autoclose").setup({
     ["|"] = { escape = true, close = true, pair = "||", enabled_filetypes = { "zig" } },
     ["`"] = { escape = false, close = true, pair = "``" },
     ["$"] = { escape = true, close = true, pair = "$$", enabled_filetypes = { "typst" } },
+    ["'"] = { escape = true, close = true, pair = "''", disabled_filetypes = { "typst" } }, -- allow single quotes to be used as primes in typst
   },
 
   options = {

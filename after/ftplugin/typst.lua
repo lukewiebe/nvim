@@ -1,26 +1,15 @@
 require("prose")
 
-vim.g.TypstAutoOpen = false
-
--- the following are intended to be used along with a terminal running `typst watch`
-
 local preview_pdf = function()
   local pdf_filename = vim.fn.expand("%"):gsub("typ$", "pdf")
-  vim.system({ "sleep", "0.1" }):wait()
-  vim.ui.open(pdf_filename)
+  vim.system({ "open", "-a", "Skim", pdf_filename })
 end
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-  pattern = "*.typ",
+vim.keymap.set("n", "<space>p", preview_pdf, { buffer = true })
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+  group = vim.api.nvim_create_augroup("TypstAutoCompile", {}),
   callback = function()
-    if not vim.g.TypstAutoOpen then return end
-    preview_pdf()
+    vim.system({ "typst", "compile", vim.fn.expand("%") })
   end,
 })
-
-vim.api.nvim_create_user_command("TypstAutoOpen", function()
-  vim.g.TypstAutoOpen = not vim.g.TypstAutoOpen
-  print("toggled auto-open")
-end, {})
-
-vim.keymap.set("n", "<space>p", preview_pdf, { buffer = true })
