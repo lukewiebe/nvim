@@ -1,7 +1,4 @@
-MiniDeps.add({
-  source = "https://github.com/saghen/blink.cmp",
-  checkout = "v0.11.0",
-})
+-- https://github.com/saghen/blink.cmp
 
 require("blink.cmp").setup({
   enabled = function() return vim.g.autocomplete end,
@@ -20,6 +17,10 @@ require("blink.cmp").setup({
   signature = {
     enabled = true,
   },
+
+  cmdline = {
+    enabled = false,
+  }
 })
 
 vim.keymap.set("n", "<leader>cc", function()
@@ -32,4 +33,4 @@ vim.keymap.set("n", "<leader>cc", function()
   end
 end, {})
 
-vim.g.autocomplete = true
+vim.g.autocomplete = false
