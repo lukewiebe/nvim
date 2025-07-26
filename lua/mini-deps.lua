@@ -1,20 +1,22 @@
 -- https://github.com/echasnovski/mini.deps
 
 -- bootstrap mini-deps (requires git)
-local path_package = vim.fn.stdpath("data") .. "/site/"
-local deps_path = path_package .. "pack/deps/start/mini-deps"
-if not vim.loop.fs_stat(deps_path) then
-  vim.cmd('echo "Installing mini-deps" | redraw')
+local path_package = vim.fn.stdpath("data") .. "/site"
+local mini_path = path_package .. "/pack/deps/start/mini.nvim"
+if not vim.loop.fs_stat(mini_path) then
+  vim.cmd('echo "Installing `mini.nvim`" | redraw')
   local clone_cmd = {
     "git",
     "clone",
     "--filter=blob:none",
-    "https://github.com/echasnovski/mini.deps",
-    deps_path,
+    "--branch",
+    "stable",
+    "https://github.com/echasnovski/mini.nvim",
+    mini_path,
   }
   vim.system(clone_cmd):wait()
-  vim.cmd("packadd mini-deps | helptags ALL")
-  vim.cmd('echo "Installed mini-deps" | redraw')
+  vim.cmd("packadd mini.nvim | helptags ALL")
+  vim.cmd('echo "Installed `mini.nvim`" | redraw')
 end
 
 require("mini.deps").setup({ path = { package = path_package } })
@@ -22,7 +24,7 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add = MiniDeps.add
 
 add({
-  source = "https://github.com/echasnovski/mini.deps",
+  source = "https://github.com/echasnovski/mini.nvim",
   checkout = "stable",
 })
 
