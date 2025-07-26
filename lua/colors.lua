@@ -1,8 +1,8 @@
 -- customize a few values from the nvim default colorscheme
 
-local edit_colorscheme = function()
-  local update_hl = require("update_hl")
+local update_hl = require("update_hl")
 
+local edit_colorscheme = function()
   -- remove backgrounds
   update_hl("Normal", { bg = "none" })
   update_hl("EndOfBuffer", { bg = "none" })

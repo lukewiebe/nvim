@@ -1,5 +1,4 @@
 # global config dependencies
-brew "dark-mode"
 brew "git"
 
 # language-specific
