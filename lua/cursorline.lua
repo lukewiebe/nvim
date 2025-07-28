@@ -13,9 +13,3 @@ vim.api.nvim_create_autocmd({ "FocusLost", "WinLeave" }, {
   group = group,
   command = "silent set nocursorline",
 })
-
-vim.api.nvim_create_autocmd("BufEnter", {
-  group = group,
-  pattern = "TelescopePrompt",
-  command = "silent set nocursorline",
-})
