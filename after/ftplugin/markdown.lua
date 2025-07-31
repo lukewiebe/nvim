@@ -1,1 +1,1 @@
-require("prose")
+require("prose")()

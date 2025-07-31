@@ -1,4 +1,4 @@
-require("prose")
+require("prose")()
 
 local preview_pdf = function()
   local pdf_filename = vim.fn.expand("%"):gsub("typ$", "pdf")
