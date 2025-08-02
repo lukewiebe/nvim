@@ -24,6 +24,10 @@ vim.o.tabstop = 2
 vim.o.shiftwidth = 0
 vim.o.signcolumn = "number"
 
+-- set cursor to block shape in terminals where the shell does not set the cursor
+vim.opt.guicursor:remove({ "t:block-blinkon500-blinkoff500-TermCursor" })
+vim.opt.guicursor:append({ "t:ver25" })
+
 if vim.fn.executable("fish") == 1 then
   vim.o.shell = "fish"
 end

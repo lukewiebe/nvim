@@ -2,7 +2,8 @@ MiniDeps.later(function()
   MiniDeps.add("https://github.com/ibhagwan/fzf-lua")
   local fzf = require("fzf-lua")
   fzf.setup({
-    "telescope",
+    "hide",
+    fzf_colors = true,
   })
 
   vim.keymap.set("n", "<space>sf", fzf.files, {})
