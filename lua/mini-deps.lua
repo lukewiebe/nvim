@@ -73,7 +73,7 @@ add("https://github.com/sindrets/diffview.nvim") -- git diffs
 add("https://github.com/stevearc/quicker.nvim") -- quickfix list improvements
 add({
   source = "https://github.com/saghen/blink.cmp",
-  checkout = "v1.5.1",
+  checkout = "v1.6.0",
 })
 
 -- mine
