@@ -59,8 +59,6 @@ add("https://github.com/andymass/vim-matchup") -- better % jumps
 add("https://github.com/tommcdo/vim-exchange") -- cx operator
 add("https://github.com/stevearc/dressing.nvim") -- simple UI improvement
 
-add("https://github.com/folke/todo-comments.nvim") -- pretty TODO: comments
-
 add("https://github.com/stevearc/conform.nvim") -- formatter
 add("https://github.com/dcampos/nvim-snippy") -- minimal snippet plugin
 
@@ -68,7 +66,6 @@ add("https://github.com/dcampos/nvim-snippy") -- minimal snippet plugin
 add("https://github.com/mfussenegger/nvim-jdtls") -- Java LSP integration
 
 -- trial
-add("https://github.com/NvChad/nvim-colorizer.lua") -- show colors like #FF00FF in text
 add("https://github.com/sindrets/diffview.nvim") -- git diffs
 add("https://github.com/stevearc/quicker.nvim") -- quickfix list improvements
 add({
