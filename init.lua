@@ -23,6 +23,7 @@ vim.o.expandtab = true
 vim.o.tabstop = 2
 vim.o.shiftwidth = 0
 vim.o.signcolumn = "number"
+vim.o.winborder = "rounded"
 
 -- set cursor to block shape in terminals where the shell does not set the cursor
 vim.opt.guicursor:remove({ "t:block-blinkon500-blinkoff500-TermCursor" })
@@ -41,6 +42,12 @@ vim.keymap.set("n", " ", "<Nop>", { silent = true })
 
 -- remap _ to do linewise up/down navigation, since - is taken by Oil
 vim.keymap.set("n", "_", "-", {})
+
+--  toggle mouse
+vim.keymap.set("n", "<leader>m", function()
+  vim.o.mouse = vim.o.mouse == "" and "a" or ""
+  vim.notify("mouse " .. (vim.o.mouse == "a" and "on" or "off"))
+end, {})
 
 -- autocmd to edit formatoptions to stop making new comments when I press "o" or "O"
 -- since this option is set in many filetype commands, an autocmd really is the cleanest way to do this
