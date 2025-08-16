@@ -23,7 +23,6 @@ vim.o.expandtab = true
 vim.o.tabstop = 2
 vim.o.shiftwidth = 0
 vim.o.signcolumn = "number"
-vim.o.winborder = "rounded"
 
 -- set cursor to block shape in terminals where the shell does not set the cursor
 vim.opt.guicursor:remove({ "t:block-blinkon500-blinkoff500-TermCursor" })
