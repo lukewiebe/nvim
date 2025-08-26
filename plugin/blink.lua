@@ -5,7 +5,7 @@ require("blink.cmp").setup({
   keymap = {
     preset = "default",
     ["<c-k>"] = {},
-    ["<c-l>"] = { "show_signature", "hide_signature", "fallback" },
+    ["<c-s>"] = { "show_signature", "hide_signature", "fallback" },
   },
 
   signature = {
