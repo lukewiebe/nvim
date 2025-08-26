@@ -62,16 +62,17 @@ add("https://github.com/stevearc/dressing.nvim") -- simple UI improvement
 add("https://github.com/stevearc/conform.nvim") -- formatter
 add("https://github.com/dcampos/nvim-snippy") -- minimal snippet plugin
 
+add({
+  source = "https://github.com/saghen/blink.cmp",
+  checkout = "v1.6.0",
+})
+
 -- Language/project specific
 add("https://github.com/mfussenegger/nvim-jdtls") -- Java LSP integration
 
 -- trial
 add("https://github.com/sindrets/diffview.nvim") -- git diffs
 add("https://github.com/stevearc/quicker.nvim") -- quickfix list improvements
-add({
-  source = "https://github.com/saghen/blink.cmp",
-  checkout = "v1.6.0",
-})
 
 -- mine
 add("https://github.com/lukewiebe/kontroll.nvim")
