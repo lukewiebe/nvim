@@ -72,7 +72,6 @@ add("https://github.com/mfussenegger/nvim-jdtls") -- Java LSP integration
 
 -- trial
 add("https://github.com/sindrets/diffview.nvim") -- git diffs
-add("https://github.com/stevearc/quicker.nvim") -- quickfix list improvements
 
 -- mine
 add("https://github.com/lukewiebe/kontroll.nvim")
