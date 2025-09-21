@@ -48,6 +48,9 @@ vim.keymap.set("n", "<leader>m", function()
   vim.notify("mouse " .. (vim.o.mouse == "a" and "on" or "off"))
 end, {})
 
+-- save with <space>w
+vim.keymap.set("n", "<space>w", "<cmd>w<cr>", {})
+
 -- autocmd to edit formatoptions to stop making new comments when I press "o" or "O"
 -- since this option is set in many filetype commands, an autocmd really is the cleanest way to do this
 vim.api.nvim_create_autocmd("BufEnter", {
