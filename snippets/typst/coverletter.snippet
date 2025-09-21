@@ -1,0 +1,16 @@
+#import "lib.typ": cover_letter
+
+#show: cover_letter.with(
+  name: "Luke Wiebe",
+  contacts: (
+    [(204) 381-4550],
+    [#link("mailto:wiebel19@myumanitoba.ca")],
+  ),
+)
+
+`system("date +'%B %-d, %Y'")`
+${1:company}
+
+RE: ${2:job_title}
+
+${0:body}
