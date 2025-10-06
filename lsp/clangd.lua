@@ -1,5 +1,6 @@
 -- modified from https://github.com/neovim/nvim-lspconfig/blob/master/lsp/clangd.lua
 
+---@type vim.lsp.Config
 return {
   name = "clangd",
   cmd = { "clangd" },

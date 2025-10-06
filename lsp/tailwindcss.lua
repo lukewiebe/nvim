@@ -1,5 +1,6 @@
 -- modified from https://github.com/neovim/nvim-lspconfig/blob/master/lsp/tailwindcss.lua
 
+---@type vim.lsp.Config
 return {
   name = "tailwindcss",
   cmd = { "tailwindcss-language-server", "--stdio" },

@@ -1,6 +1,7 @@
 -- modified from https://github.com/neovim/nvim-lspconfig/blob/master/lsp/ts_ls.lua
 
 -- NOTE: currently no vue support
+---@type vim.lsp.Config
 return {
   name = "ts_ls",
   cmd = { "typescript-language-server", "--stdio" },

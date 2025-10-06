@@ -1,5 +1,6 @@
 -- modified from https://github.com/neovim/nvim-lspconfig/blob/master/lsp/lua_ls.lua
 
+---@type vim.lsp.Config
 return {
   name = "lua_ls",
   cmd = { "lua-language-server" },
