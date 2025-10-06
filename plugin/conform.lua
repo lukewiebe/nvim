@@ -16,6 +16,7 @@ conform.setup({
     fish = { "fish_indent" },
     zig = { "zigfmt" },
     cpp = { "clang-format" },
+    python = { "ruff_format", "ruff_organize_imports" },
   },
 })
 
