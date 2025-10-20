@@ -5,7 +5,7 @@ return {
   name = "lua_ls",
   cmd = { "lua-language-server" },
   filetypes = { "lua" },
-  root_dir = vim.env.PWD,
+  root_dir = vim.fn.getcwd(),
   single_file_support = true,
   settings = {
     Lua = {

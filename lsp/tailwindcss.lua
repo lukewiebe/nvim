@@ -4,7 +4,7 @@
 return {
   name = "tailwindcss",
   cmd = { "tailwindcss-language-server", "--stdio" },
-  root_dir = vim.env.PWD,
+  root_dir = vim.fn.getcwd(),
   single_file_support = false, -- tailwind is a bad citizen, no single file support
   filetypes = {
     -- html

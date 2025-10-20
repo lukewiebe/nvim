@@ -4,6 +4,6 @@
 return {
   name = "zls",
   cmd = { "zls" },
-  root_dir = vim.env.PWD,
+  root_dir = vim.fn.getcwd(),
   filetypes = { "zig" },
 }
