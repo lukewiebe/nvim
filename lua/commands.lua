@@ -23,3 +23,6 @@ vim.api.nvim_create_user_command("Copy", function()
   buffer_contents = table.concat(buffer_contents, "\n")
   vim.fn.setreg("*", buffer_contents)
 end, {})
+
+-- :Write to make :W work the same way as :w
+vim.api.nvim_create_user_command("Write", "write", {})
