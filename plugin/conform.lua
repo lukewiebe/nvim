@@ -31,8 +31,8 @@ vim.keymap.set("n", "<space>f", function()
   else
     conform.format()
   end
-  if vim.bo.filetype == "r" then
-    require("format-r").replace_equals_with_arrow(0)
-  end
+  -- if vim.bo.filetype == "r" then
+  --   require("format-r").replace_equals_with_arrow(0)
+  -- end
   vim.notify("formatted")
 end, {})
