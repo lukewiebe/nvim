@@ -73,7 +73,6 @@ add("https://github.com/mfussenegger/nvim-jdtls") -- Java LSP integration
 -- trial
 add("https://github.com/sindrets/diffview.nvim") -- git diffs
 add("https://tpope.io/vim/dadbod.git")
-add("https://github.com/jpalardy/vim-slime")
 
 -- mine
 add("https://github.com/lukewiebe/kontroll.nvim")
