@@ -1,6 +1,7 @@
 -- https://github.com/jpalardy/vim-slime
 -- https://github.com/fasterius/slime-peek.nvim
 
+-- must be set before loading slime
 vim.g.slime_target = "neovim"
 vim.g.slime_neovim_ignore_unlisted = false
 
