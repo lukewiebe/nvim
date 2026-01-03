@@ -9,4 +9,4 @@ Here are a few of the important files:
 - Plugins that need setup get their own file in `./plugin/`, each of which is automatically called during startup.
 - My LSP configuration is in `./after/ftplugin/<filetype>.lua`, and keybinds are set via autocommand in `./lua/lsp.lua`.
 
-My goal with this setup is to use a small number of plugins while still being fully-featured. I'm happy to take a 90% solution if it means I can use the defaults or a simpler plugin.
+I hope you can find something worth stealing in here.

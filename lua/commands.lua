@@ -15,7 +15,7 @@ vim.api.nvim_create_user_command("Cd", function()
 end, {})
 
 -- :Copy to quickly copy an entire buffer to the clipboard
--- could easily add ranges to it, but then why not copy using "*y
+-- to copy ranges, just use "*y
 
 vim.api.nvim_create_user_command("Copy", function()
   local buf = vim.api.nvim_get_current_buf()
