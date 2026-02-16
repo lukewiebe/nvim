@@ -3,5 +3,5 @@
 return {
   cmd = { "rust-analyzer" },
   filetypes = { "rust" },
-  root_dir = vim.fn.getcwd(),
+  root_markers = { "Cargo.toml", "rust-project.json" },
 }
