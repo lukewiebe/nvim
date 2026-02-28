@@ -18,6 +18,7 @@ conform.setup({
     cpp = { "clang-format" },
     python = { "ruff_format", "ruff_organize_imports" },
     r = { "air" },
+    rust = { "rustfmt" },
   },
 })
 
