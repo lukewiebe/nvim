@@ -22,6 +22,10 @@ conform.setup({
   },
 })
 
+conform.formatters["clang-format"] = {
+  append_args = { "-style={IndentWidth: 4}" }
+}
+
 vim.keymap.set("n", "<space>f", function()
   local run_async = {
     "zig",
