@@ -1,0 +1,11 @@
+CC := clang
+SOURCES := $(wildcard *.c)
+EXES := $(SOURCES:.c=)
+CFLAGS := -g -Wall -Werror -Wextra -Wpedantic
+
+.PHONY: run all clean
+
+all: $(EXES)
+
+clean:
+	rm -rf $(EXES) $(SOURCES:.c=.dSYM)
