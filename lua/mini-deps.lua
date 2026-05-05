@@ -64,15 +64,13 @@ add("https://github.com/dcampos/nvim-snippy") -- minimal snippet plugin
 
 add({
   source = "https://github.com/saghen/blink.cmp",
-  checkout = "v1.8.0",
-})
+  checkout = "v1.10.2",
+}) -- autocomplete
 
 -- Language/project specific
 add("https://github.com/mfussenegger/nvim-jdtls") -- Java LSP integration
 
 -- trial
-add("https://github.com/sindrets/diffview.nvim") -- git diffs
-add("https://tpope.io/vim/dadbod.git")
 
 -- mine
 add("https://github.com/lukewiebe/kontroll.nvim")
