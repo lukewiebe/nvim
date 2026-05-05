@@ -1,5 +1,4 @@
 -- https://github.com/jpalardy/vim-slime
--- https://github.com/fasterius/slime-peek.nvim
 
 -- must be set before loading slime
 vim.g.slime_target = "neovim"
@@ -15,5 +14,6 @@ vim.api.nvim_create_user_command("Radian", function()
   vim.b.slime_config = { job_id = job_id }
 end, {})
 
+-- https://github.com/fasterius/slime-peek.nvim
 local peek = require("slime_peek")
 peek.setup()
