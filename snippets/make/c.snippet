@@ -1,11 +1,28 @@
-CC := clang
 SOURCES := $(wildcard *.c)
-EXES := $(SOURCES:.c=)
-CFLAGS := -g -Wall -Werror -Wextra -Wpedantic
+OBJECTS := $(SOURCES:.c=.o)
+DEPFILES := $(SOURCES:.c=.d)
+EXECUTABLE := main
+CC := clang
+CFLAGS := -Wall -Wextra -Wpedantic -MMD -MP
+DEBUGGER := lldb
 
-.PHONY: run all clean
+.PHONY: all clean run build debug
 
-all: $(EXES)
+build: $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(CFLAGS) -o $@ $^
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+-include $(DEPFILES)
 
 clean:
-	rm -rf $(EXES) $(SOURCES:.c=.dSYM)
+	rm -f $(OBJECTS) $(EXECUTABLE) $(DEPFILES)
+
+run: build
+	./$(EXECUTABLE)
+
+debug: build
+	$(DEBUGGER) $(EXECUTABLE)
