@@ -1,5 +1,7 @@
 require("prose")()
 
+MiniPairs.map_buf(0, "i", "$", { action = "closeopen", pair = "$$", neigh_pattern = "^[^\\]" })
+
 local preview_pdf = function()
   local pdf_filename = vim.fn.expand("%"):gsub("typ$", "pdf")
   vim.system({ "open", "-a", "Skim", pdf_filename })
