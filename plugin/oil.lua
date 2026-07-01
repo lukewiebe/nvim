@@ -18,12 +18,13 @@ oil.setup({
       if vim.tbl_contains(ignore, name) then return true end
 
       -- ignore pdfs if there is a typst file with the same name
-      if name:sub(-4) ~= ".pdf" then return false end
-      local name_no_extension = name:sub(1, -5)
+      if name:sub(-4) ~= ".pdf" then return false end -- show non-pdfs
+      -- local name_no_extension = name:sub(1, -5)
+      local typst_file = name:sub(1, -5) .. ".typ"
       local dir = oil.get_current_dir(bufnr)
 
       for file in vim.fs.dir(dir) do
-        if file:sub(1, -5) == name_no_extension then return true end
+        if file == typst_file then return true end
       end
 
       return false
