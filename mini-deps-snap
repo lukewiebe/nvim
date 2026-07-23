@@ -1,7 +1,7 @@
 return {
   ["abolish.git"] = "dcbfe065297d31823561ba787f51056c147aa682",
   ["autoclose.nvim"] = "bafd0368716216fa6a7bb2a43ecd889b44efdb46",
-  ["blink.cmp"] = "b19413d214068f316c78978b08264ed1c41830ec",
+  ["blink.cmp"] = "78336bc89ee5365633bcf754d93df01678b5c08f",
   ["conform.nvim"] = "dca1a190aa85f9065979ef35802fb77131911106",
   ["dressing.nvim"] = "2d7c2db2507fa3c4956142ee607431ddb2828639",
   ["fugitive.git"] = "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0",
