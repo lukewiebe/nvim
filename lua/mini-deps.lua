@@ -44,7 +44,6 @@ add({
   source = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
   checkout = "main",
 })
--- add("https://github.com/nvim-treesitter/nvim-treesitter-refactor")
 add("https://github.com/windwp/nvim-ts-autotag")
 
 add("https://github.com/m4xshen/autoclose.nvim") -- sensible bracket autoclose behaviour
