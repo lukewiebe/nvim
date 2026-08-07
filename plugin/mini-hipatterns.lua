@@ -4,8 +4,9 @@ local hipatterns = require("mini.hipatterns")
 
 hipatterns.setup({
   highlighters = {
-    -- Highlight standalone 'TODO', 'NOTE'
+    -- Highlight standalone 'TODO', 'NOTE', 'DEBUG'
     todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
+    debug = { pattern = "%f[%w]()DEBUG()%f[%W]", group = "MiniHipatternsHack" },
     note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
 
     -- Highlight hex color strings (`#rrggbb`) using that color
