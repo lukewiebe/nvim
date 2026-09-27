@@ -1,14 +1,10 @@
-MiniDeps.later(function()
-  MiniDeps.add("https://github.com/ibhagwan/fzf-lua")
-  local fzf = require("fzf-lua")
-  fzf.setup({
-    "hide",
-    fzf_colors = true,
-  })
+-- https://nvim-mini.org/mini.nvim/readmes/mini-pick
 
-  vim.keymap.set("n", "<space>sf", fzf.files, {})
-  vim.keymap.set("n", "<space>sg", fzf.live_grep_native, {})
-  vim.keymap.set("n", "<space>sb", fzf.buffers, {})
-  vim.keymap.set("n", "<space>sh", fzf.helptags, {})
-  vim.keymap.set("n", "<space>sp", fzf.resume, {})
-end)
+local pick = require("mini.pick")
+pick.setup()
+
+vim.keymap.set("n", "<space>sf", pick.builtin.files)
+vim.keymap.set("n", "<space>sg", pick.builtin.grep_live)
+vim.keymap.set("n", "<space>sb", pick.builtin.buffers)
+vim.keymap.set("n", "<space>sh", pick.builtin.help)
+vim.keymap.set("n", "<space>sp", pick.builtin.resume)
