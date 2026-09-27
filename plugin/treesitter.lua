@@ -1,4 +1,4 @@
--- https://github.com/nvim-treesitter/nvim-treesitter/tree/main
+-- https://github.com/nvim-treesitter/nvim-treesitter
 
 local ts = require("nvim-treesitter")
 

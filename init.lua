@@ -1,6 +1,5 @@
 -- settings
 
-vim.o.smarttab = true
 vim.o.hlsearch = true
 vim.o.number = true
 vim.o.ignorecase = true
@@ -20,20 +19,16 @@ vim.o.autowrite = true
 vim.o.inccommand = "split"
 vim.o.makeprg = "make -j8"
 vim.o.expandtab = true
-vim.o.tabstop = 2
-vim.o.shiftwidth = 0
+vim.o.tabstop = 4
+vim.o.shiftwidth = 0 -- use the value of tabstop
+vim.o.softtabstop = -1 -- use the value of shiftwidth
 vim.o.signcolumn = "number"
 
 -- set cursor to block shape in terminals where the shell does not set the cursor
 vim.opt.guicursor:remove({ "t:block-blinkon500-blinkoff500-TermCursor" })
 vim.opt.guicursor:append({ "t:ver25" })
 
-if vim.fn.executable("fish") == 1 then
-  vim.o.shell = "fish"
-end
-
--- gui settings
-vim.o.guifont = "Input Mono Narrow:h14"
+if vim.fn.executable("fish") == 1 then vim.o.shell = "fish" end
 
 -- a few keymaps
 -- unmap space to use as an alternate leader
@@ -69,8 +64,54 @@ vim.api.nvim_create_autocmd("VimResized", {
   callback = function() vim.cmd.wincmd("=") end,
 })
 
--- My own lua modules
-require("mini-deps") -- first so that packages get loaded early
+-- must be set before loading slime
+vim.g.slime_target = "neovim"
+vim.g.slime_neovim_ignore_unlisted = false
+
+-- package hooks, see :h vim.pack-events
+
+local hooks = function(ev)
+  local name, kind = ev.data.spec.name, ev.data.kind
+
+  if name == "nvim-treesitter" and (kind == "install" or kind == "update") then
+    local ts = require("nvim-treesitter")
+    ts.install(ts.get_available())
+    ts.update()
+  end
+end
+
+vim.api.nvim_create_autocmd("PackChanged", { callback = hooks })
+
+-- packages -------------------------------------------------------------------
+
+vim.pack.add({
+  { src = "https://github.com/nvim-mini/mini.nvim", version = "stable" },
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
+  {
+    src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
+    version = "main",
+  },
+  "https://github.com/windwp/nvim-ts-autotag",
+  "https://github.com/JoosepAlviste/nvim-ts-context-commentstring",
+  "https://tpope.io/vim/abolish.git",
+  "https://tpope.io/vim/sleuth.git",
+  "https://tpope.io/vim/surround.git",
+  "https://tpope.io/vim/repeat.git",
+  "https://tpope.io/vim/fugitive.git",
+  "https://github.com/tpope/vim-rhubarb",
+  "https://github.com/stevearc/oil.nvim",
+  "https://github.com/andymass/vim-matchup",
+  "https://github.com/tommcdo/vim-exchange",
+  "https://github.com/stevearc/conform.nvim",
+  "https://github.com/dcampos/nvim-snippy",
+  {
+    src = "https://github.com/saghen/blink.cmp",
+    version = "v1.10.2",
+  },
+  "https://github.com/jpalardy/vim-slime",
+  "https://github.com/fasterius/slime-peek.nvim",
+})
+
 require("colors")
 require("cursorline")
 require("lsp")
